@@ -86,7 +86,7 @@ Encounter *-r- "[0..*]" Participant : participant
 Encounter *-r- "[0..*]" Location : location
 Encounter *-r- "[0..1]" Hospitalization : hospitalization
 Encounter *-d- "[0..*]" StatusHistory : statusHistory
-Encounter *l- "[0..*]" Diagnosis : diagnosis
+Encounter *-l- "[0..*]" Diagnosis : diagnosis
 Encounter *-l- "[0..*]" ClassHistory : classHistory
 
 ' ========================================
