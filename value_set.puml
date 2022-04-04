@@ -14,8 +14,8 @@ skinparam linetype ortho
 ' ========================================
 
 class Designation {
-  language : code [0..1] «CommonLanguages?»
-  use : Coding [0..1] «DesignationUse+»
+  language : code [0..1] « CommonLanguages? »
+  use : Coding [0..1] « DesignationUse+ »
   value : string [1..1]
 }
 
@@ -52,13 +52,13 @@ class Compose {
 
 class Filter {
   property : code [1..1]
-  op : code [1..1] «FilterOperator!»
+  op : code [1..1] « FilterOperator! »
   value : string [1..1]
 }
 
 class Parameter {
   name : string [1..1]
-  value[x] : Type [0..1] «string|boolean|integer|decimal|uri|code|dateTime»
+  value[x] : Type [0..1] « string|boolean|integer|decimal|uri|code|dateTime »
 }
 
 class ValueSet {
@@ -67,14 +67,14 @@ class ValueSet {
   version : string [0..1]
   name : string [0..1]
   title : string [0..1]
-  status : code [1..1] «PublicationStatus!»
+  status : code [1..1] « PublicationStatus! »
   experimental : boolean [0..1]
   date : dateTime [0..1]
   publisher : string [0..1]
   contact : ContactDetail [0..*]
   description : markdown [0..1]
   useContext : UsageContext [0..*]
-  jurisdiction : CodeableConcept [0..*] «Jurisdiction ValueSet+»
+  jurisdiction : CodeableConcept [0..*] « Jurisdiction ValueSet+ »
   immutable : boolean [0..1]
   purpose : markdown [0..1]
   copyright : markdown [0..1]
