@@ -5,7 +5,7 @@ The conceptual model of H2O will be published here. To foster maintainability a 
 - [Observation Model](https://github.com/IMI-H2O/h2o-conceptual-model#observation-model);
 - [Patient Model](https://github.com/IMI-H2O/h2o-conceptual-model#patient-model);
 - [Questionnaire Model](https://github.com/IMI-H2O/h2o-conceptual-model#questionnaire-model); and
-- [(Generic) ValueSet Model](https://github.com/IMI-H2O/h2o-conceptual-model#generic-valueset-model).
+- [ValueSet Model](https://github.com/IMI-H2O/h2o-conceptual-model#valueset-model).
 
 
 ## Encounter Model
@@ -24,6 +24,6 @@ The conceptual model of H2O will be published here. To foster maintainability a 
 ![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/questionnaire.puml)
 
 
-## (Generic) ValueSet Model
-![(Generic) ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/value_set.puml)
+## ValueSet Model
+![ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/value_set.puml)
 
