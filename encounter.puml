@@ -1,0 +1,55 @@
+@startuml
+' ========================================
+' start: configuration
+' ========================================
+
+skinparam linetype ortho
+
+' ========================================
+' end: configuration
+' ========================================
+
+' ========================================
+' start: definition of entities/classes
+' ========================================
+
+class ClassHistory {
+}
+
+class Diagnosis {
+}
+
+class Encounter {
+}
+
+class Hospitalization {
+}
+
+class Location {
+}
+
+class Participant {
+}
+
+class StatusHistory {
+}
+
+' ========================================
+' end: definition of entities/classes
+' ========================================
+
+' ========================================
+' start: definition of associations
+' ========================================
+
+Encounter *-- "[0..*]" Participant : participant
+Encounter *-- "[0..*]" Location : location
+Encounter *-- "[0..1]" Hospitalization : hospitalization
+Encounter *-- "[0..*]" StatusHistory : statusHistory
+Encounter *-- "[0..*]" Diagnosis : diagnosis
+Encounter *-- "[0..*]" ClassHistory : classHistory
+
+' ========================================
+' end: definition of associations
+' ========================================
+@enduml
