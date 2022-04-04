@@ -1,6 +1,6 @@
 # H2O Conceptual model
 
-The conceptual model of H2O will be published here. The model is stored in [PlantUML](http://www.plantuml.com/) files.
+The conceptual model of H2O will be published here. The model is stored in [PlantUML](https://plantuml.com) files.
 
 Conceptual model for the questionnaire:
 
