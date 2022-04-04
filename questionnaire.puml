@@ -42,6 +42,19 @@ class ValueSet {
 ' ========================================
 
 ' ========================================
+' start: definition of notes
+' ========================================
+
+note right of QuestionnaireItem::type
+  group | display | boolean | decimal | integer | date | dateTime
+end note
+
+' ========================================
+' end: definition of notes
+' ========================================
+
+
+' ========================================
 ' start: definition of associations
 ' ========================================
 
