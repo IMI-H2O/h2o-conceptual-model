@@ -26,6 +26,7 @@ class QuestionnaireItem {
   linkId : string [1..1]
   code : Coding [0..*]
   text : string [0..1]
+  type : code [1..1]
 }
 
 
