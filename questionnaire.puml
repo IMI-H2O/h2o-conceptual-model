@@ -22,6 +22,12 @@ class Questionnaire {
   ...
 }
 
+class QuestionnaireItem {
+  linkId : string [1..1]
+  code : Coding [0..*]
+  text : string [0..1]
+}
+
 ' ========================================
 ' end: definition of entities/classes
 ' ========================================
