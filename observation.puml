@@ -13,6 +13,14 @@ skinparam linetype ortho
 ' start: definition of entities/classes
 ' ========================================
 
+class Component {
+  code : CodeableConcept [1..1] «LOINCCodes??»
+  value[x] : Type [0..1] «Quantity|CodeableConcept|string|boolean|integer|
+                          Range|Ratio|SampledData|time|dateTime|Period»
+  dataAbsentReason : CodeableConcept [0..1] «DataAbsentReason+»
+  interpretation : CodeableConcept [0..*] «ObservationInterpretationCodes+»
+}
+
 class Encounter {
 }
 
@@ -24,6 +32,15 @@ class Observation {
 }
 
 class Patient {
+}
+
+class ReferenceRange {
+  low : Quantity(SimpleQuantity) [0..1]
+  high : Quantity(SimpleQuantity) [0..1]
+  type : CodeableConcept [0..1] «ObservationReferenceRangeMean...?»
+  appliesTo : CodeableConcept [0..*] «ObservationReferenceRangeAppl...??»
+  age : Range [0..1]
+  text : string [0..1]
 }
 
 ' ========================================
