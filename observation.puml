@@ -15,8 +15,7 @@ skinparam linetype ortho
 
 class Component {
   code : CodeableConcept [1..1] «LOINCCodes??»
-  value[x] : Type [0..1] «Quantity|CodeableConcept|string|boolean|integer|
-                          Range|Ratio|SampledData|time|dateTime|Period»
+  value[x] : Type [0..1] «Quantity|CodeableConcept|string|boolean|integer|Range|Ratio|SampledData|time|dateTime|Period»
   dataAbsentReason : CodeableConcept [0..1] «DataAbsentReason+»
   interpretation : CodeableConcept [0..*] «ObservationInterpretationCodes+»
 }
