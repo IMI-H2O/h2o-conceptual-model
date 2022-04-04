@@ -14,24 +14,63 @@ skinparam linetype ortho
 ' ========================================
 
 class ClassHistory {
+  class : Coding [1..1] « v3.ActEncounterCode+ »
+  period : Period [1..1]
 }
 
 class Diagnosis {
+  condition : Reference [1..1] « Condition|Procedure »
+  use : CodeableConcept [0..1] « DiagnosisRole? »
+  rank : positiveInt [0..1]
 }
 
 class Encounter {
+  identifier : Identifier [0..*]
+  status : code [1..1] « EncounterStatus! »
+  class : Coding [1..1] « v3.ActEncounterCode+ »
+  type : CodeableConcept [0..*] « EncounterType?? »
+  serviceType : CodeableConcept [0..1] « ServiceType?? »
+  priority : CodeableConcept [0..1] « v3.ActPriority?? »
+  subject : Reference [0..1] « Patient|Group »
+  episodeOfCare : Reference [0..*] « EpisodeOfCare »
+  basedOn : Reference [0..*] « ServiceRequest »
+  appointment : Reference [0..*] « Appointment »
+  period : Period [0..1]
+  length : Duration [0..1]
+  reasonCode : CodeableConcept [0..*] « EncounterReasonCodes? »
+  reasonReference : Reference [0..*] « Condition|Procedure|Observation|ImmunizationRecommendation »
+  account : Reference [0..*] « Account »
+  serviceProvider : Reference [0..1] « Organization »
 }
 
 class Hospitalization {
+  preAdmissionIdentifier : Identifier [0..1]
+  origin : Reference [0..1] « Location|Organization »
+  admitSource : CodeableConcept [0..1] « AdmitSource? »
+  reAdmission : CodeableConcept [0..1] « v2.0092?? »
+  dietPreference : CodeableConcept [0..*] « Diet?? »
+  specialCourtesy : CodeableConcept [0..*] « SpecialCourtesy? »
+  specialArrangement : CodeableConcept [0..*] « SpecialArrangements? »
+  destination : Reference [0..1] « Location|Organization »
+  dischargeDisposition : CodeableConcept [0..1] « DischargeDisposition?? »
 }
 
 class Location {
+  location : Reference [1..1] « Location »
+  status : code [0..1] « EncounterLocationStatus! »
+  physicalType : CodeableConcept [0..1] « LocationType?? »
+  period : Period [0..1]
 }
 
 class Participant {
+  type : CodeableConcept [0..*] « ParticipantType+ »
+  period : Period [0..1]
+  individual : Reference [0..1] « Practitioner|PractitionerRole|RelatedPerson »
 }
 
 class StatusHistory {
+  status : code [1..1] « EncounterStatus! »
+  period : Period [1..1]
 }
 
 ' ========================================
@@ -42,6 +81,7 @@ class StatusHistory {
 ' start: definition of associations
 ' ========================================
 
+Encounter *-- "[0..1]" Encounter : partOf
 Encounter *-- "[0..*]" Participant : participant
 Encounter *-- "[0..*]" Location : location
 Encounter *-- "[0..1]" Hospitalization : hospitalization
