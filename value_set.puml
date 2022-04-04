@@ -1,0 +1,107 @@
+@startuml
+' ========================================
+' start: configuration
+' ========================================
+
+skinparam linetype ortho
+
+' ========================================
+' end: configuration
+' ========================================
+
+' ========================================
+' start: definition of entities/classes
+' ========================================
+
+class Designation {
+  language : code [0..1] «CommonLanguages?»
+  use : Coding [0..1] «DesignationUse+»
+  value : string [1..1]
+}
+
+class Expansion {
+  identifier : uri [0..1]
+  timestamp : dateTime [1..1]
+  total : integer [0..1]
+  offset : integer [0..1]
+}
+
+class ConceptReference {
+  code : code [1..1]
+  display : string [0..1]
+}
+
+class ConceptSet {
+  system : uri [0..1]
+  version : string [0..1]
+}
+
+class Contains {
+  system : uri [0..1]
+  abstract : boolean [0..1]
+  inactive : boolean [0..1]
+  version : string [0..1]
+  code : code [0..1]
+  display : string [0..1]
+}
+
+class Compose {
+  lockedDate : date [0..1]
+  inactive : boolean [0..1]
+}
+
+class Filter {
+  property : code [1..1]
+  op : code [1..1] «FilterOperator!»
+  value : string [1..1]
+}
+
+class Parameter {
+  name : string [1..1]
+  value[x] : Type [0..1] «string|boolean|integer|decimal|uri|code|dateTime»
+}
+
+class ValueSet {
+  url : uri [0..1]
+  identifier : Identifier [0..*]
+  version : string [0..1]
+  name : string [0..1]
+  title : string [0..1]
+  status : code [1..1] «PublicationStatus!»
+  experimental : boolean [0..1]
+  date : dateTime [0..1]
+  publisher : string [0..1]
+  contact : ContactDetail [0..*]
+  description : markdown [0..1]
+  useContext : UsageContext [0..*]
+  jurisdiction : CodeableConcept [0..*] «Jurisdiction ValueSet+»
+  immutable : boolean [0..1]
+  purpose : markdown [0..1]
+  copyright : markdown [0..1]
+}
+
+' ========================================
+' end: definition of entities/classes
+' ========================================
+
+' ========================================
+' start: definition of associations
+' ========================================
+
+ValueSet  *-- "[0..1]" Expansion : expansion
+ValueSet  *-- "[0..1]" Compose : compose
+Expansion *-- "[0..*]" Parameter : parameter
+Expansion *-- "[0..*]" Contains : contains
+Contains *-- "[0..*]" Contains : contains
+Contains *-- "[0..*]" Designation : designation
+ConceptReference *-- "[0..*]" Designation : designation
+ConceptSet *-- "[0..*]" ValueSet : valueSet
+ConceptSet *-- "[0..*]" ConceptReference : concept
+ConceptSet *-- "[0..*]" Filter : filter
+Compose *-- "[1..*]" ConceptSet : include
+Compose *-- "[0..*]" ConceptSet : exclude
+
+' ========================================
+' end: definition of associations
+' ========================================
+@enduml
