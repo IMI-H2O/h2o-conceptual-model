@@ -46,7 +46,7 @@ class ValueSet {
 ' ========================================
 
 note right of QuestionnaireItem::type
-  group | display | boolean | decimal | integer | date | dateTime
+  a code for the data type of the item
 end note
 
 ' ========================================
