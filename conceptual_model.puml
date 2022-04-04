@@ -13,6 +13,13 @@ skinparam linetype ortho
 ' start: definition of entities/classes
 ' ========================================
 
+class Observation {
+  identifier : Identifier [0..*]
+  category : CodeableConcept [0..*]
+  code : CodeableConcept [1..1]
+  ...
+}
+
 class Questionnaire {
   url : uri [0..1]
   identifier : Identifier [0..*]
@@ -29,6 +36,10 @@ class Questionnaire {
 ' ========================================
 ' start: definition of associations
 ' ========================================
+
+Observation *-- "[0..*]" Component : component
+Observation *-- "[0..*]" ReferenceRange : referenceRange
+Component *-- "[0..*]" ReferenceRange : referenceRange
 
 Questionnaire *-- "[0..*]" QuestionnaireItem : item
 QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
