@@ -83,8 +83,8 @@ class StatusHistory {
 
 Encounter *-- "[0..1]" Encounter : partOf
 Encounter *-- "[0..*]" Participant : participant
-Encounter *-- "[0..*]" Location : location
-Encounter *-- "[0..1]" Hospitalization : hospitalization
+Encounter *-u- "[0..*]" Location : location
+Encounter *-u- "[0..1]" Hospitalization : hospitalization
 Encounter *-- "[0..*]" StatusHistory : statusHistory
 Encounter *-- "[0..*]" Diagnosis : diagnosis
 Encounter *-- "[0..*]" ClassHistory : classHistory
