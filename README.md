@@ -7,7 +7,7 @@ The conceptual models of H2O will be published here. The models are stored in [P
 
 
 ## Questionnaire Model
-![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/questionnaire_model.puml)
+![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/questionnaire.puml)
 
 
 ## (Generic) ValueSet Model
