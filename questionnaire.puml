@@ -28,6 +28,11 @@ class QuestionnaireItem {
   text : string [0..1]
 }
 
+
+class QuestionnaireResponseItem {
+  text : string [0..1]
+}
+
 ' ========================================
 ' end: definition of entities/classes
 ' ========================================
@@ -46,6 +51,7 @@ QuestionnaireItem *-- "[0..*]" EnableWhen : enableWhen
 QuestionnaireResponse *-- "[0..1]" Questionnaire : questionnaire
 QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
 QuestionnaireResponseItem *-- "[0..*]" QuestionnaireResponseItem : item
+QuestionnaireResponseItem -- "[1..1]" QuestionnaireItem : linkId
 QuestionnaireResponseItem *-- "[0..*]" Answer : answer
 Answer *-- "[0..*]" QuestionnaireResponseItem : item
 
