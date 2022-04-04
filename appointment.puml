@@ -1,0 +1,61 @@
+@startuml
+' ========================================
+' start: configuration
+' ========================================
+
+skinparam linetype ortho
+
+' ========================================
+' end: configuration
+' ========================================
+
+' ========================================
+' start: definition of entities/classes
+' ========================================
+
+class Appointment {
+  identifier : Identifier [0..*]
+  status : code [1..1] « AppointmentStatus! »
+  cancelationReason : CodeableConcept [0..1] « AppointmentCancellationReason?? »
+  serviceCategory : CodeableConcept [0..*] « ServiceCategory?? »
+  serviceType : CodeableConcept [0..*] « ServiceType?? »
+  specialty : CodeableConcept [0..*] « PracticeSettingCodeValueSet? »
+  appointmentType : CodeableConcept [0..1] « v2.0276? »
+  reasonCode : CodeableConcept [0..*] « EncounterReasonCodes? »
+  reasonReference : Reference [0..*] « Condition|Procedure|Observation|ImmunizationRecommendation »
+  priority : unsignedInt [0..1]
+  description : string [0..1]
+  supportingInformation : Reference [0..*] « Any »
+  start : instant [0..1]
+  end : instant [0..1]
+  minutesDuration : positiveInt [0..1]
+  slot : Reference [0..*] « Slot »
+  created : dateTime [0..1]
+  comment : string [0..1]
+  patientInstruction : string [0..1]
+  basedOn : Reference [0..*] « ServiceRequest »
+  requestedPeriod : Period [0..* {
+}
+
+class Participant {
+  type : CodeableConcept [0..*] « ParticipantType+ »
+  actor : Reference [0..1] « Patient|Practitioner|PractitionerRole|RelatedPerson|Device|HealthcareService|Location »
+  required : code [0..1] « ParticipantRequired! »
+  status : code [1..1] « ParticipationStatus! »
+  period : Period [0..1]
+}
+
+' ========================================
+' end: definition of entities/classes
+' ========================================
+
+' ========================================
+' start: definition of associations
+' ========================================
+
+Appointment *-- "[1..*]" Participant : participant
+
+' ========================================
+' end: definition of associations
+' ========================================
+@enduml
