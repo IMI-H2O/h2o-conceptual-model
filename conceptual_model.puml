@@ -13,11 +13,17 @@ skinparam linetype ortho
 ' start: definition of entities/classes
 ' ========================================
 
+class Encounter {
+}
+
 class Observation {
   identifier : Identifier [0..*]
   category : CodeableConcept [0..*]
   code : CodeableConcept [1..1]
   ...
+}
+
+class Patient {
 }
 
 class Questionnaire {
@@ -40,12 +46,16 @@ class Questionnaire {
 Observation *-- "[0..*]" Component : component
 Observation *-- "[0..*]" ReferenceRange : referenceRange
 Component *-- "[0..*]" ReferenceRange : referenceRange
+Observation *-- "[0..1]" Encounter : encounter
+Observation *-- "[0..1]" Patient : subject
+
 
 Questionnaire *-- "[0..*]" QuestionnaireItem : item
 QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
 QuestionnaireItem *-- "[0..*]" Initial : initial
 QuestionnaireItem *-- "[0..*]" AnswerOption : answerOption
 QuestionnaireItem *-- "[0..*]" EnableWhen : enableWhen
+
 
 QuestionnaireResponse *-- "[0..1]" Questionnaire : questionnaire
 QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
