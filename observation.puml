@@ -43,6 +43,9 @@ class ReferenceRange {
   text : string [0..1]
 }
 
+class QuestionnaireResponse {
+}
+
 ' ========================================
 ' end: definition of entities/classes
 ' ========================================
@@ -56,6 +59,7 @@ Observation *-- "[0..*]" ReferenceRange : referenceRange
 Component *-- "[0..*]" ReferenceRange : referenceRange
 Observation -- "[0..1]" Encounter : encounter
 Observation -- "[0..1]" Patient : subject
+Observation -- "[0..*]" QuestionnaireResponse : derivedFrom
 
 ' ========================================
 ' end: definition of associations
