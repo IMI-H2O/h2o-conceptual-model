@@ -27,6 +27,7 @@ class Observation {
   identifier : Identifier [0..*]
   category : CodeableConcept [0..*]
   code : CodeableConcept [1..1]
+  value[x] : Type [0..1] « Quantity|CodeableConcept|string|boolean|integer|Range|Ratio|SampledData|time|dateTime|Period »
   ...
 }
 
