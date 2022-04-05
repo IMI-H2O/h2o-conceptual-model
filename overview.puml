@@ -1,0 +1,77 @@
+@startuml
+' ========================================
+' start: configuration
+' ========================================
+
+skinparam linetype ortho
+
+' ========================================
+' end: configuration
+' ========================================
+
+' ========================================
+' start: definition of entities/classes
+' ========================================
+
+class Patient {
+}
+
+class Encounter {
+}
+
+class Observation {
+}
+
+class Questionnaire {
+}
+
+class QuestionnaireItem {
+}
+
+class QuestionnaireResponseItem {
+}
+
+class ValueSet {
+}
+
+' ========================================
+' end: definition of entities/classes
+' ========================================
+
+' ========================================
+' start: definition of notes
+' ========================================
+
+
+' ========================================
+' end: definition of notes
+' ========================================
+
+
+' ========================================
+' start: definition of associations
+' ========================================
+
+Questionnaire *-- "[0..*]" QuestionnaireItem : item
+QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
+QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
+
+
+QuestionnaireResponse -- "[0..1]" Questionnaire : questionnaire
+QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
+QuestionnaireResponseItem *-- "[0..*]" QuestionnaireResponseItem : item
+QuestionnaireResponseItem -- "[1..1]" QuestionnaireItem : linkId
+QuestionnaireResponseItem *-- "[0..*]" Answer : answer
+Answer *-- "[0..*]" QuestionnaireResponseItem : item
+
+Encounter -- "[0..1]" Patient: subject
+
+Observation -- "[0..1]" Patient: subject
+Observation -- "[0..1]" Encounter: encounter
+Observation -- "[0..*]" QuestionnaireResponse: derivedFrom
+
+
+' ========================================
+' end: definition of associations
+' ========================================
+@enduml
