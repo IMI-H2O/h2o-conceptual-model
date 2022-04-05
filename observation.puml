@@ -54,7 +54,7 @@ class ReferenceRange {
 Observation *-- "[0..*]" Component : component
 Observation *-- "[0..*]" ReferenceRange : referenceRange
 Component *-- "[0..*]" ReferenceRange : referenceRange
-Observation *-- "[0..1]" Encounter : encounter
+Observation -- "[0..1]" Encounter : encounter
 Observation -- "[0..1]" Patient : subject
 
 ' ========================================
