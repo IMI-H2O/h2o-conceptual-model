@@ -90,7 +90,7 @@ Observation *-d- "[0..*]" QuestionnaireResponse : hasMember
 Observation *-d- "[0..1]" QuestionnaireResponse : derivedFrom
 
 
-Encounter *-- "[0..1]" Encounter : partOf
+Encounter *-r- "[0..1]" Encounter : partOf
 
 
 RelatedPerson *-- "[1..1]" Patient : patient
