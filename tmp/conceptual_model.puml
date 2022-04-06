@@ -47,6 +47,19 @@ class Patient {
   managingOrganization : Reference [0..1] « Organization »
 }
 
+class RelatedPerson {
+  identifier : Identifier [0..*]
+  active : boolean [0..1]
+  relationship : CodeableConcept [0..*] « PatientRelationshipType? »
+  name : HumanName [0..*]
+  telecom : ContactPoint [0..*]
+  gender : code [0..1] « AdministrativeGender! »
+  birthDate : date [0..1]
+  address : Address [0..*]
+  photo : Attachment [0..*]
+  period : Period [0..1]
+}
+
 class Practitioner {
   identifier : Identifier [0..*]
   active : boolean [0..1]
@@ -78,6 +91,9 @@ Observation *-d- "[0..1]" QuestionnaireResponse : derivedFrom
 
 
 Encounter *-- "[0..1]" Encounter : partOf
+
+
+RelatedPerson *-- "[1..1]" Patient : patient
 
 ' ========================================
 ' end: definition of associations
