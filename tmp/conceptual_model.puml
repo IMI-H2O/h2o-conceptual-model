@@ -26,7 +26,6 @@ class Observation {
 class Encounter {
   identifier : Identifier [0..*]
   type : CodeableConcept [0..*] « EncounterType?? »
-  subject : Reference [0..1] « Patient|Group »
   appointment : Reference [0..*] « Appointment »
   period : Period [0..1]
   length : Duration [0..1]
@@ -80,7 +79,7 @@ class Practitioner {
 ' ========================================
 
 Observation *-l- "[0..1]" Patient : subject
-Observation *-r- "[0..1]" Encounter : encounter
+Observation *-d- "[0..1]" Encounter : encounter
 Observation *-u- "[0..*]" Practitioner : performer
 Observation *-u- "[0..*]" Patient : performer
 Observation *-u- "[0..*]" RelatedPerson : performer
@@ -90,7 +89,8 @@ Observation *-d- "[0..*]" QuestionnaireResponse : hasMember
 Observation *-d- "[0..1]" QuestionnaireResponse : derivedFrom
 
 
-Encounter *-r- "[0..1]" Encounter : partOf
+Encounter *-- "[0..1]" Patient : subject
+'Encounter *-r- "[0..1]" Encounter : partOf
 
 
 RelatedPerson *-- "[1..1]" Patient : patient
