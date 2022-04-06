@@ -30,7 +30,6 @@ class Encounter {
   appointment : Reference [0..*] « Appointment »
   period : Period [0..1]
   length : Duration [0..1]
-  partOf : Reference [0..1] « Encounter »
 }
 
 class Patient {
@@ -76,6 +75,9 @@ Observation *-u- "[0..*]" RelatedPerson : performer
 Observation *-d- "[0..*]" QuestionnaireResponse : hasMember
 'Observation *-- "[0..*]" Observation : derivedFrom
 Observation *-d- "[0..1]" QuestionnaireResponse : derivedFrom
+
+
+Encounter *-- "[0..1]" Encounter : partOf
 
 ' ========================================
 ' end: definition of associations
