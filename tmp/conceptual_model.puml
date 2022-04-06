@@ -13,7 +13,51 @@ skinparam linetype ortho
 ' start: definition of entities/classes
 ' ========================================
 
+class Observation {
+  identifier : Identifier [0..*]
+  category : CodeableConcept [0..*] « ObservationCategoryCodes? »
+  code : CodeableConcept [1..1] « LOINCCodes?? »
+  effective[x] : Type [0..1] « dateTime|Period|Timing|instant »
+  issued : instant [0..1]
+  value[x] : Type [0..1] « ... »
+  bodySite : CodeableConcept [0..1] « SNOMEDCTBodyStructures?? »
+}
 
+class Encounter {
+  identifier : Identifier [0..*]
+  type : CodeableConcept [0..*] « EncounterType?? »
+  subject : Reference [0..1] « Patient|Group »
+  appointment : Reference [0..*] « Appointment »
+  period : Period [0..1]
+  length : Duration [0..1]
+  partOf : Reference [0..1] « Encounter »
+}
+
+class Patient {
+  identifier : Identifier [0..*]
+  active : boolean [0..1]
+  name : HumanName [0..*]
+  telecom : ContactPoint [0..*]
+  gender : code [0..1] « AdministrativeGender! »
+  birthDate : date [0..1]
+  deceased[x] : Type [0..1] « boolean|dateTime »
+  address : Address [0..*]
+  maritalStatus : CodeableConcept [0..1] « Marital Status + »
+  photo : Attachment [0..*]
+  generalPractitioner : Reference [0..*] « ... »
+  managingOrganization : Reference [0..1] « Organization »
+}
+
+class Practitioner {
+  identifier : Identifier [0..*]
+  active : boolean [0..1]
+  name : HumanName [0..*]
+  telecom : ContactPoint [0..*]
+  address : Address [0..*]
+  gender : code [0..1] « AdministrativeGender! »
+  birthDate : date [0..1]
+  photo : Attachment [0..*]
+}
 
 ' ========================================
 ' end: definition of entities/classes
@@ -28,9 +72,9 @@ Observation *-r- "[0..1]" Encounter : encounter
 Observation *-u- "[0..*]" Practitioner : performer
 Observation *-u- "[0..*]" Patient : performer
 Observation *-u- "[0..*]" RelatedPerson : performer
-Observation *-- "[0..*]" Observation : hasMember
+'Observation *-- "[0..*]" Observation : hasMember
 Observation *-d- "[0..*]" QuestionnaireResponse : hasMember
-Observation *-- "[0..*]" Observation : derivedFrom
+'Observation *-- "[0..*]" Observation : derivedFrom
 Observation *-d- "[0..1]" QuestionnaireResponse : derivedFrom
 
 ' ========================================
