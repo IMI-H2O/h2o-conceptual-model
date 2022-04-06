@@ -1,0 +1,39 @@
+@startuml
+' ========================================
+' start: configuration
+' ========================================
+
+skinparam linetype ortho
+
+' ========================================
+' end: configuration
+' ========================================
+
+' ========================================
+' start: definition of entities/classes
+' ========================================
+
+
+
+' ========================================
+' end: definition of entities/classes
+' ========================================
+
+' ========================================
+' start: definition of associations
+' ========================================
+
+Observation *-- "[0..1]" Patient : subject
+Observation *-- "[0..1]" Encounter : encounter
+Observation *-- "[0..*]" Practitioner : performer
+Observation *-- "[0..*]" Patient : performer
+Observation *-- "[0..*]" RelatedPerson : performer
+Observation *-- "[0..*]" Observation : hasMember
+Observation *-- "[0..*]" QuestionnaireResponse : hasMember
+Observation *-- "[0..*]" Observation : derivedFrom
+Observation *-- "[0..1]" QuestionnaireResponse : derivedFrom
+
+' ========================================
+' end: definition of associations
+' ========================================
+@enduml
