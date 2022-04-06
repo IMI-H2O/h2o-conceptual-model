@@ -23,15 +23,15 @@ skinparam linetype ortho
 ' start: definition of associations
 ' ========================================
 
-Observation *-- "[0..1]" Patient : subject
-Observation *-- "[0..1]" Encounter : encounter
-Observation *-- "[0..*]" Practitioner : performer
-Observation *-- "[0..*]" Patient : performer
-Observation *-- "[0..*]" RelatedPerson : performer
-Observation *-- "[0..*]" Observation : hasMember
-Observation *-- "[0..*]" QuestionnaireResponse : hasMember
-Observation *-- "[0..*]" Observation : derivedFrom
-Observation *-- "[0..1]" QuestionnaireResponse : derivedFrom
+Observation *-u- "[0..1]" Patient : subject
+Observation *-d- "[0..1]" Encounter : encounter
+Observation *-l- "[0..*]" Practitioner : performer
+Observation *-l- "[0..*]" Patient : performer
+Observation *-l- "[0..*]" RelatedPerson : performer
+Observation *-r- "[0..*]" Observation : hasMember
+Observation *-r- "[0..*]" QuestionnaireResponse : hasMember
+Observation *-r- "[0..*]" Observation : derivedFrom
+Observation *-r- "[0..1]" QuestionnaireResponse : derivedFrom
 
 ' ========================================
 ' end: definition of associations
