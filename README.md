@@ -34,7 +34,7 @@ The conceptual model of H2O will be published here. To foster maintainability a 
 ![ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/value_set.puml)
 
 
-## Overview Model --> Conceptual/Class Model
+## Overview Model
 ![Overview Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/overview.puml)
 
 Check also the [Conceptual/Class Model](https://github.com/IMI-H2O/h2o-conceptual-model/blob/main/tmp/README.md).
