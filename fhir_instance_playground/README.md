@@ -50,14 +50,19 @@ There is also a [FHIR Code System 'EducationLevel'](https://www.hl7.org/fhir/v3/
             ...
 ```
 
-- [ ] The usage of ElementDefinitions as questionnaire items need to be further investigated. As ElementDefinition is used in StructureDefinitions and cannot exist as stand-alone resource, it needs to be decided whats the 'kind' attribute of this StructureDefinition.  
+- [ ] The usage of [ElementDefinitions](https://www.hl7.org/fhir/elementdefinition.html) as questionnaire items need to be further investigated. As ElementDefinition is used in [StructureDefinitions](https://www.hl7.org/fhir/structuredefinition.html#structuredefinition) and cannot exist as stand-alone resource, it needs to be decided whats the 'kind' attribute of this StructureDefinition.  
 - [ ] Although the usage of ElementDefinition for the sake of reusability of questions across questionnaires is favorable, a simple alternative would be to use the element-extension, which provides e.g. min-max constraints, see [alternatives/Questionnaire_ElementExtension.json](alternatives/Questionnaire_ElementExtension.json)
 Use of extensions:  
 [Core extension for Questionnaire](https://www.hl7.org/fhir/questionnaire-extensions.html) provides e.g. units for inputs  
 [Element-definition Extensions](https://www.hl7.org/fhir/element-extensions.html) would provide more detailed restrictions on allowed values, e.g. regex, min-max-values, decimal-places, length-restrictions
-- [ ] IG "[Structured Data Capture](https://www.hl7.org/fhir/questionnaire.html)" defines some relevant features, e.g. Support for extracting information from a completed QuestionnaireResponse to generate other FHIR resources. But this IG is very elaborated and might be to complex for our application.
-- [ ] some limitations of FSH were encountered
+- [ ] IG "[Structured Data Capture](https://www.hl7.org/fhir/questionnaire.html)" defines some relevant features, e.g. Support for extracting information from a completed [QuestionnaireResponse](https://www.hl7.org/fhir/questionnaireresponse.html) to generate other FHIR resources, rendering options. But this IG is very elaborated and might be to complex for our application.
+- [ ] some limitations of FSH were encountered (e.g. ValueSet definitions only allow include and exclude operations, no access to properties using Caret Paths)
 
-### next steps
+- [] Unable to find proper examples for usage of the 'definition' attribute in the [Questionnaire](https://www.hl7.org/fhir/questionnaire.html#resource).item.   
+This example uses 'definition' but those do not resolve to any proper ElementDefinition containing Resources:
+ https://www.hl7.org/fhir/questionnaire-profile-example-ussg-fht.html
+
+### Next steps
 - [ ] further investigate ElementDefinitions, find examples
 - [ ] clean up conceptual model, remove unused attributes
+- [ ] see reference projects in https://www.devdays.com/wp-content/uploads/2020/12/jceua_201117_BrianPostlethwaite_Questionnaires.pdf
