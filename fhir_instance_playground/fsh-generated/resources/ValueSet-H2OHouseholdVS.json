@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "H2OHouseholdVS",
+  "id": "H2OHouseholdVS",
+  "title": "Living arrangements of H2O patients.",
+  "version": "0.1.0",
+  "url": "https://health-outcomes-observatory.eu/fhir/ValueSet/H2OHouseholdVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem"
+      }
+    ]
+  }
+}

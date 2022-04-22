@@ -1,0 +1,111 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "h2o-education-level-code-system",
+  "url": "https://health-outcomes-observatory.eu/fhir/CodeSystem/H2OEducationLevelCodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "version": "0.0.1+2022-04-14",
+  "name": "H2OEducationLevelCodeSystem",
+  "concept": [
+    {
+      "code": "no-education",
+      "display": "no education (yet)",
+      "definition": "no education (yet)",
+      "designation": [
+        {
+          "language": "de",
+          "value": "(bisher) kein Schulabschluss"
+        }
+      ]
+    },
+    {
+      "code": "primary",
+      "display": "Primary education",
+      "definition": "Primary education",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Förder-/Haupt-/Volksschule"
+        },
+        {
+          "language": "de-AT",
+          "value": "Volks-/Sonder-/Statutschule 1.-4. Schulstufe"
+        }
+      ]
+    },
+    {
+      "code": "lower-secondary",
+      "display": "Lower secondary education",
+      "definition": "Lower secondary education",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Realschule/POS/MSA"
+        },
+        {
+          "language": "de-AT",
+          "value": "Real-/Haupt-/Neue Mittelschule"
+        }
+      ]
+    },
+    {
+      "code": "upper-secondary",
+      "display": "Upper secondary education",
+      "definition": "Upper secondary education",
+      "designation": [
+        {
+          "language": "de-DE",
+          "value": "Abitur/Fachabitur"
+        },
+        {
+          "language": "de-AT",
+          "value": "AHS Oberstufe/ABHS/BHS/LWS/Lehre"
+        }
+      ]
+    },
+    {
+      "code": "bachelor",
+      "display": "Bachelor or equivalent",
+      "definition": "Bachelor or equivalent",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Bachelorabschluss oder gleichwertig"
+        }
+      ]
+    },
+    {
+      "code": "master",
+      "display": "Master or equivalent",
+      "definition": "Master or equivalent",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Masterabschluss oder gleichwertig"
+        }
+      ]
+    },
+    {
+      "code": "doctoral",
+      "display": "Doctoral or equivalent",
+      "definition": "Doctoral or equivalent",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Doktorabschluss oder höher"
+        }
+      ]
+    },
+    {
+      "code": "different",
+      "display": "different",
+      "definition": "different level of education",
+      "designation": [
+        {
+          "language": "de",
+          "value": "anderer"
+        }
+      ]
+    }
+  ]
+}

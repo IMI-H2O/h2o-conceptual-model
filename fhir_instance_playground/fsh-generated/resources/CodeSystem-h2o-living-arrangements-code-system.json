@@ -1,0 +1,55 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "h2o-living-arrangements-code-system",
+  "url": "https://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "version": "0.0.1+2022-04-20",
+  "name": "H2OHouseholdCodeSystem",
+  "concept": [
+    {
+      "code": "single",
+      "display": "Single household",
+      "definition": "Single household",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Einzelhaushalt"
+        }
+      ]
+    },
+    {
+      "code": "shared",
+      "display": "Shared household",
+      "definition": "Shared household",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Gemeinsamer Haushalt"
+        }
+      ]
+    },
+    {
+      "code": "facility",
+      "display": "Nursing facility",
+      "definition": "Nursing facility",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Pflegeeinrichtung"
+        }
+      ]
+    },
+    {
+      "code": "without",
+      "display": "Without household",
+      "definition": "Without household",
+      "designation": [
+        {
+          "language": "de",
+          "value": "Ohne Wohnung"
+        }
+      ]
+    }
+  ]
+}

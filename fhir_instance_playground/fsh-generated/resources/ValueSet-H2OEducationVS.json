@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "H2OEducationVS",
+  "id": "H2OEducationVS",
+  "title": "Education levels of H2O patients.",
+  "version": "0.1.0",
+  "url": "https://health-outcomes-observatory.eu/fhir/ValueSet/H2OEducationVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OEducationLevelCodeSystem"
+      }
+    ]
+  }
+}

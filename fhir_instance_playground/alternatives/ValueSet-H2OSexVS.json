@@ -1,0 +1,64 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "H2OSexVS",
+  "id": "H2OSexVS",
+  "title": "Sex of H2O patients.",
+  "description": "Sex of H2O patients.",
+  "version": "0.1.0",
+  "url": "http://health-outcomes-observatory.eu/fhir/ValueSet/H2OSexVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/administrative-gender",
+        "concept": [
+          {
+            "code": "male",
+            "designation": [{
+              "language": "de",
+              "value": "männlich"
+            },{
+              "language": "en",
+              "value": "male"
+            }]
+          },
+          {
+            "code": "female",
+            "designation": [{
+              "language": "de",
+              "value": "weiblich"
+            },{
+              "language": "en",
+              "value": "female"
+            }]
+          },
+          {
+            "code": "other",
+            "designation": [{
+              "language": "de",
+              "value": "divers"
+            },{
+              "language": "en",
+              "value": "divers"
+            }]
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/ValueSet/gender-identity",
+        "concept": [
+          {
+            "code": "non-disclose",
+            "designation": [{
+              "language": "de",
+              "value": "möchte ich nicht beantworten"
+            },{
+              "language": "en",
+              "value": "I do not wish to answer"
+            }]
+          }
+        ]
+      }
+    ]
+  }
+}

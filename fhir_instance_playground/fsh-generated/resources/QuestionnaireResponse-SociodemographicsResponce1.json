@@ -1,0 +1,82 @@
+{
+  "resourceType": "QuestionnaireResponse",
+  "id": "SociodemographicsResponce1",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/DoeJane"
+  },
+  "source": {
+    "reference": "Patient/DoeJane"
+  },
+  "questionnaire": "http://health-outcomes-observatory.eu/fhir/Questionnaire/SociodemographicsQuestionnaire",
+  "encounter": {
+    "reference": "Encounter/DoeJane1"
+  },
+  "item": [
+    {
+      "linkId": "1",
+      "answer": [
+        {
+          "valueInteger": 1999
+        }
+      ]
+    },
+    {
+      "linkId": "2",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "female",
+            "system": "http://hl7.org/fhir/administrative-gender"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "3",
+      "answer": [
+        {
+          "valueInteger": 175
+        }
+      ]
+    },
+    {
+      "linkId": "4",
+      "answer": [
+        {
+          "valueInteger": 68
+        }
+      ]
+    },
+    {
+      "linkId": "5",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "master",
+            "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OEducationLevelCodeSystem"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "6",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "single",
+            "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "7",
+      "answer": [
+        {
+          "valueInteger": 10101
+        }
+      ]
+    }
+  ]
+}
