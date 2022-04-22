@@ -58,11 +58,12 @@ Use of extensions:
 - [ ] IG "[Structured Data Capture](https://www.hl7.org/fhir/questionnaire.html)" defines some relevant features, e.g. Support for extracting information from a completed [QuestionnaireResponse](https://www.hl7.org/fhir/questionnaireresponse.html) to generate other FHIR resources, rendering options. But this IG is very elaborated and might be to complex for our application.
 - [ ] some limitations of FSH were encountered (e.g. ValueSet definitions only allow include and exclude operations, no access to properties using Caret Paths)
 
-- [] Unable to find proper examples for usage of the 'definition' attribute in the [Questionnaire](https://www.hl7.org/fhir/questionnaire.html#resource).item.   
+- [ ] Unable to find proper examples for usage of the 'definition' attribute in the [Questionnaire](https://www.hl7.org/fhir/questionnaire.html#resource).item.   
 This example uses 'definition' but those do not resolve to any proper ElementDefinition containing Resources:
  https://www.hl7.org/fhir/questionnaire-profile-example-ussg-fht.html
 
-### Next steps
-- [ ] further investigate ElementDefinitions, find examples
-- [ ] clean up conceptual model, remove unused attributes
+### Next steps (florian)
+- [ ] Further investigate ElementDefinitions, find some examples, fix "reuse of questions" problem
+- [ ] Prepare code suggestions for Alizé (next meeting 2022-04-29)
+- [ ] Compare FHIR instances, to those used in the API definition (joris)
 - [ ] see reference projects in https://www.devdays.com/wp-content/uploads/2020/12/jceua_201117_BrianPostlethwaite_Questionnaires.pdf
