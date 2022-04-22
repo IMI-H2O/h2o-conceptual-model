@@ -1,0 +1,63 @@
+# This file is used with 'REST Client' VSCode Extension, and
+# uses the https://server.fire.ly/r4/ public FHIR server
+
+### PATIENT
+###
+### CREATE patient resource
+POST https://server.fire.ly/r4/Patient
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+
+< fsh-generated/resources/Patient-DoeJane.json
+
+### VALIDATE Patient
+GET https://server.fire.ly/r4/Patient/IDgoesHERE/$validate
+Accept: application/fhir+json
+
+### GET Patient
+GET https://server.fire.ly/r4/Patient/IDgoesHERE
+Accept: application/fhir+json
+
+
+### ENCOUNTER
+###
+### CREATE
+POST https://server.fire.ly/r4/Encounter
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+
+< fsh-generated/resources/Encounter-DoeJane1.json
+
+### VALIDATE
+GET https://server.fire.ly/r4/Encounter/IDgoesHERE/$validate
+Accept: application/fhir+json
+
+### GET
+GET https://server.fire.ly/r4/Encounter/83aef702-152b-4f2a-805f-671ba3559ee7/_history
+Accept: application/fhir+json
+
+
+### VALUESET
+###
+### CREATE
+POST https://r4.ontoserver.csiro.au/fhir/ValueSet
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+
+< alternatives/ValueSet-H2OSexVS.json
+
+### GET
+GET https://r4.ontoserver.csiro.au/fhir/ValueSet/32532050-5d30-44bd-8bcf-7dfd383c314d/
+Accept: application/fhir+json
+# $expand does not work because reference to hl7 valueset cannot be resolved
+
+
+
+### STRUCTURE DEFINITION
+###
+### CREATE
+POST https://server.fire.ly/r4/StructureDefinition
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+
+< fsh-generated/resources/StructureDefinition-h2o-questions-model.json

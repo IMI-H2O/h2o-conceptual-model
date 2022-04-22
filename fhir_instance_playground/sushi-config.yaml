@@ -1,0 +1,9 @@
+id: fhir.health-outcomes-observatory.eu #todo
+canonical: https://health-outcomes-observatory.eu/fhir #todo
+name: H2O FHIR Conceptual #todo
+status: draft
+version: 0.1.0
+fhirVersion: 4.0.1
+#copyrightYear: 2022 #IG creation only
+#releaseLabel: draft #IG creation only
+FSHOnly: true # since this initial draft should not attempt to build any IG

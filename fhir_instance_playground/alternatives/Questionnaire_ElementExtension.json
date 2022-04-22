@@ -1,0 +1,38 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "SociodemographicsQuestionnaire",
+  "url": "http://health-outcomes-observatory.eu/fhir/Questionnaire/SociodemographicsQuestionnaire",
+  "title": "H2O example questionnaire (sociodemographics)",
+  "name": "H2oSociodemographicsQuestionnaire",
+  "status": "active",
+  "subjectType": [
+    "Patient"
+  ],
+  "date": "2022-04-14",
+  "experimental": true,
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "150",
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "display": "Europe"
+        }
+      ]
+    }
+  ],
+  "item": [
+    {
+      "linkId": "1",
+      "text": "Year of birth / Geburtsjahr",
+      "type": "integer",
+      "code": {
+        "system": "http://loinc.org",
+        "code": "80904-6"
+      },
+
+      "maxValue": 2022,
+      "minValue": 1900
+    }
+  ]
+}
