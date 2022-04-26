@@ -65,5 +65,7 @@ This example uses 'definition' but those do not resolve to any proper ElementDef
 ### Next steps (florian)
 - [ ] Further investigate ElementDefinitions, find some examples, fix "reuse of questions" problem
 - [ ] Prepare code suggestions for Alizé (next meeting 2022-04-29)
-- [ ] Compare FHIR instances, to those used in the API definition (joris)
+- [ ] Compare FHIR instances, to those used in the API definition (joris, see [https://github.com/IMI-H2O/outcomes-dashboard/blob/main/docs/api.md](https://github.com/IMI-H2O/outcomes-dashboard/blob/main/docs/api.md))
 - [ ] see reference projects in https://www.devdays.com/wp-content/uploads/2020/12/jceua_201117_BrianPostlethwaite_Questionnaires.pdf
+- [ ] check how Bundles can be resolved by the fhir server (included value-sets expanded to be returned with all included codes)
+- [ ] compare to REDcap and their display options (e.g. radio selections)
