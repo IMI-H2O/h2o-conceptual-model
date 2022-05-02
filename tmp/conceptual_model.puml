@@ -13,61 +13,28 @@ skinparam linetype ortho
 ' start: definition of entities/classes
 ' ========================================
 
-class Observation {
-  identifier : Identifier [0..*]
-  category : CodeableConcept [0..*] « ObservationCategoryCodes? »
-  code : CodeableConcept [1..1] « LOINCCodes?? »
-  effective[x] : Type [0..1] « dateTime|Period|Timing|instant »
-  issued : instant [0..1]
-  value[x] : Type [0..1] « ... »
-  bodySite : CodeableConcept [0..1] « SNOMEDCTBodyStructures?? »
-}
-
-class Encounter {
-  identifier : Identifier [0..*]
-  type : CodeableConcept [0..*] « EncounterType?? »
-  appointment : Reference [0..*] « Appointment »
-  period : Period [0..1]
-  length : Duration [0..1]
-}
-
 class Patient {
-  identifier : Identifier [0..*]
-  active : boolean [0..1]
-  name : HumanName [0..*]
-  telecom : ContactPoint [0..*]
-  gender : code [0..1] « AdministrativeGender! »
-  birthDate : date [0..1]
-  deceased[x] : Type [0..1] « boolean|dateTime »
-  address : Address [0..*]
-  maritalStatus : CodeableConcept [0..1] « Marital Status + »
-  photo : Attachment [0..*]
-  generalPractitioner : Reference [0..*] « ... »
-  managingOrganization : Reference [0..1] « Organization »
 }
 
 class RelatedPerson {
-  identifier : Identifier [0..*]
-  active : boolean [0..1]
-  relationship : CodeableConcept [0..*] « PatientRelationshipType? »
-  name : HumanName [0..*]
-  telecom : ContactPoint [0..*]
-  gender : code [0..1] « AdministrativeGender! »
-  birthDate : date [0..1]
-  address : Address [0..*]
-  photo : Attachment [0..*]
-  period : Period [0..1]
 }
 
-class Practitioner {
-  identifier : Identifier [0..*]
-  active : boolean [0..1]
-  name : HumanName [0..*]
-  telecom : ContactPoint [0..*]
-  address : Address [0..*]
-  gender : code [0..1] « AdministrativeGender! »
-  birthDate : date [0..1]
-  photo : Attachment [0..*]
+class Encounter {
+}
+
+class Observation {
+}
+
+class Questionnaire {
+}
+
+class QuestionnaireItem {
+}
+
+class QuestionnaireResponseItem {
+}
+
+class ValueSet {
 }
 
 ' ========================================
@@ -75,23 +42,38 @@ class Practitioner {
 ' ========================================
 
 ' ========================================
+' start: definition of notes
+' ========================================
+
+
+' ========================================
+' end: definition of notes
+' ========================================
+
+
+' ========================================
 ' start: definition of associations
 ' ========================================
 
-Observation *-l- "[0..1]" Patient : subject
-Observation *-d- "[0..1]" Encounter : encounter
-Observation *-u- "[0..*]" Practitioner : performer
-Observation *-u- "[0..*]" Patient : performer
-Observation *-u- "[0..*]" RelatedPerson : performer
-'Observation *-- "[0..*]" Observation : hasMember
-Observation *-d- "[0..*]" QuestionnaireResponse : hasMember
-'Observation *-- "[0..*]" Observation : derivedFrom
-Observation *-d- "[0..1]" QuestionnaireResponse : derivedFrom
+Questionnaire *-- "[0..*]" QuestionnaireItem : item
+QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
+QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
 
 
-Encounter *-- "[0..1]" Patient : subject
-'Encounter *-r- "[0..1]" Encounter : partOf
+QuestionnaireResponse -- "[0..1]" Questionnaire : questionnaire
+QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
+QuestionnaireResponseItem *-- "[0..*]" QuestionnaireResponseItem : item
+QuestionnaireResponseItem -- "[1..1]" QuestionnaireItem : linkId
+QuestionnaireResponseItem *-- "[0..*]" Answer : answer
+Answer *-- "[0..*]" QuestionnaireResponseItem : item
 
+Encounter -- "[0..1]" Patient: subject
+
+Observation -- "[0..1]" Patient: subject
+Observation -- "[0..1]" Encounter: encounter
+Observation -- "[0..*]" QuestionnaireResponse: derivedFrom
+Observation *-- "[0..*]" RelatedPerson : performer
+Observation *-- "[0..*]" Practitioner : performer
 
 RelatedPerson *-- "[1..1]" Patient : patient
 
