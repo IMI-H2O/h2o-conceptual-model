@@ -57,7 +57,7 @@ class ValueSet {
 
 Questionnaire *-- "[0..*]" QuestionnaireItem : item
 QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
-QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
+QuestionnaireItem -l- "[0..1]" ValueSet : answerValueSet
 
 
 QuestionnaireResponse -- "[0..1]" Questionnaire : questionnaire
