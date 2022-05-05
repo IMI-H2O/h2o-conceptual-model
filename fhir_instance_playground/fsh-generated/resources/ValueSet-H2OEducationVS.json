@@ -9,7 +9,35 @@
   "compose": {
     "include": [
       {
-        "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OEducationLevelCodeSystem"
+        "system": "https://health-outcomes-observatory.eu/fhir/CodeSystem/ISCED2011EducationLevels",
+        "concept": [
+          {
+            "code": "2"
+          },
+          {
+            "code": "3"
+          },
+          {
+            "code": "4"
+          },
+          {
+            "code": "6"
+          },
+          {
+            "code": "7"
+          },
+          {
+            "code": "8"
+          }
+        ]
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "concept": [
+          {
+            "code": "OTH"
+          }
+        ]
       }
     ]
   }
