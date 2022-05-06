@@ -35,6 +35,9 @@ class QualifiedInterval {
 class ValueSet {
 }
 
+class Observation {
+}
+
 ' ========================================
 ' end: definition of entities/classes
 ' ========================================
@@ -45,9 +48,10 @@ class ValueSet {
 
 ObservationDefinition *-- "[0..*]" QualifiedInterval : qualifiedInterval
 ObservationDefinition -- "[0..1]" ValueSet : validCodedValueSet
-ObservationDefinition -- "[0..1]" ValueSet : normalCodedValueSe
+ObservationDefinition -- "[0..1]" ValueSet : normalCodedValueSet
 ObservationDefinition -- "[0..1]" ValueSet : abnormalCodedValueSet
-ObservationDefinition -- "[0..1]" ValueSet : criticalCodedValueSe
+ObservationDefinition -- "[0..1]" ValueSet : criticalCodedValueSet
+Observation -- "[0..*]" ObservationDefinition : basedOn
 
 ' ========================================
 ' end: definition of associations
