@@ -28,6 +28,8 @@ class QuestionnaireItem {
   text : string [0..1]
   type : code [1..1]
   itemControl : Extension questionnaire-itemControl [0..1]
+  minValue : Extension minValue [0..1]
+  maxValue : Extension maxValue [0..1]
 }
 
 
@@ -52,6 +54,14 @@ end note
 
 note right of QuestionnaireItem::itemControl
   predefined FHIR extension http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl
+end note
+
+note right of QuestionnaireItem::minValue
+  predefined FHIR extension http://hl7.org/fhir/StructureDefinition/minValue
+end note
+
+note right of QuestionnaireItem::maxValue
+  predefined FHIR extension http://hl7.org/fhir/StructureDefinition/maxValue
 end note
 
 ' ========================================
