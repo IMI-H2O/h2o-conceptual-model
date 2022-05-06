@@ -1,0 +1,55 @@
+@startuml
+' ========================================
+' start: configuration
+' ========================================
+
+skinparam linetype ortho
+
+' ========================================
+' end: configuration
+' ========================================
+
+' ========================================
+' start: definition of entities/classes
+' ========================================
+
+class ObservationDefinition {
+  identifier : Identifier [0..*]
+  category : CodeableConcept [0..*]
+  code : CodeableConcept [1..1]
+  permittedDataType: code [0..*]
+  multipleResultsAllowed: boolean [0..1]
+  preferredReportName: string [0..1]
+  quantitativeDetails.unit: CodeableConcept [0..1]
+  ...
+}
+
+class QualifiedInterval {
+  category : code [0..1]
+  range : Range [0..1]
+  gender : code [0..1]
+  age : Range [0..*]
+  ...
+}
+
+class ValueSet {
+}
+
+' ========================================
+' end: definition of entities/classes
+' ========================================
+
+' ========================================
+' start: definition of associations
+' ========================================
+
+ObservationDefinition *-- "[0..*]" QualifiedInterval : qualifiedInterval
+ObservationDefinition -- "[0..1]" ValueSet : validCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : normalCodedValueSe
+ObservationDefinition -- "[0..1]" ValueSet : abnormalCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : criticalCodedValueSe
+
+' ========================================
+' end: definition of associations
+' ========================================
+@enduml
