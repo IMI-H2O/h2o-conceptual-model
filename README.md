@@ -4,6 +4,7 @@ The conceptual model of H2O will be published here. To foster maintainability a 
 - [Appointment Model](https://github.com/IMI-H2O/h2o-conceptual-model#appointment-model);
 - [Encounter Model](https://github.com/IMI-H2O/h2o-conceptual-model#encounter-model);
 - [Observation Model](https://github.com/IMI-H2O/h2o-conceptual-model#observation-model);
+- [ObservationDefinition Model](https://github.com/IMI-H2O/h2o-conceptual-model#observationdefinition-model);
 - [Patient Model](https://github.com/IMI-H2O/h2o-conceptual-model#patient-model);
 - [Questionnaire Model](https://github.com/IMI-H2O/h2o-conceptual-model#questionnaire-model); 
 - [ValueSet Model](https://github.com/IMI-H2O/h2o-conceptual-model#valueset-model);and
@@ -20,6 +21,10 @@ The conceptual model of H2O will be published here. To foster maintainability a 
 
 ## Observation Model
 ![Observation Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/observation.puml)
+
+
+## ObservationDefinition Model
+![ObservationDefinition Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/observationdefinition.puml)
 
 
 ## Patient Model
