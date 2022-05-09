@@ -25,6 +25,12 @@ class Encounter {
 class Observation {
 }
 
+class ObservationDefinition {
+}
+
+class QualifiedInterval {
+}
+
 class Questionnaire {
 }
 
@@ -74,6 +80,13 @@ Observation -- "[0..1]" Encounter: encounter
 Observation -- "[0..*]" QuestionnaireResponse: derivedFrom
 Observation *-- "[0..*]" RelatedPerson : performer
 Observation *-- "[0..*]" Practitioner : performer
+
+ObservationDefinition *-- "[0..*]" QualifiedInterval : qualifiedInterval
+ObservationDefinition -- "[0..1]" ValueSet : validCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : normalCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : abnormalCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : criticalCodedValueSet
+Observation -- "[0..*]" ObservationDefinition : basedOn
 
 RelatedPerson *-- "[1..1]" Patient : patient
 
