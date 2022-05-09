@@ -1,41 +1,87 @@
 {
   "resourceType": "ValueSet",
+  "id": "H2OEducationVS",
+  "url": "https://health-outcomes-observatory.eu/fhir/ValueSet/H2OEducationVS",
   "status": "active",
   "name": "H2OEducationVS",
-  "id": "H2OEducationVS",
   "title": "Education levels of H2O patients.",
   "version": "0.1.0",
-  "url": "https://health-outcomes-observatory.eu/fhir/ValueSet/H2OEducationVS",
   "compose": {
     "include": [
       {
         "system": "https://health-outcomes-observatory.eu/fhir/CodeSystem/ISCED2011EducationLevels",
         "concept": [
           {
-            "code": "2"
+            "code": "0",
+            "designation": [
+              {
+                "language": "de",
+                "value": "(bisher) kein Schulabschluss"
+              }
+            ]
           },
           {
-            "code": "3"
+            "code": "2",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "Hauptschule, NMS, AHS Unterstufe"
+              }
+            ]
           },
           {
-            "code": "4"
+            "code": "3",
+            "designation": [
+              {
+                "language": "de-AT",
+                "value": "AHS Oberstufe, BHS, BMS, Lehre"
+              }
+            ]
           },
           {
-            "code": "6"
+            "code": "4",
+            "designation": [
+              {
+                "language": "de",
+                "value": "Abitur / Fachabitur"
+              }
+            ]
           },
           {
-            "code": "7"
+            "code": "6",
+            "designation": [
+              {
+                "language": "de",
+                "value": "Bachelorabschluss oder gleichwertig"
+              }
+            ]
           },
           {
-            "code": "8"
-          }
-        ]
-      },
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "concept": [
+            "code": "7",
+            "designation": [
+              {
+                "language": "de",
+                "value": "Masterabschluss oder gleichwertig"
+              }
+            ]
+          },
           {
-            "code": "OTH"
+            "code": "8",
+            "designation": [
+              {
+                "language": "de",
+                "value": "Doktorabschluss oder höher"
+              }
+            ]
+          },
+          {
+            "code": "9",
+            "designation": [
+              {
+                "language": "de",
+                "value": "anderer"
+              }
+            ]
           }
         ]
       }

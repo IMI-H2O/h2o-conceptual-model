@@ -9,7 +9,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem"
+        "system": "https://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem"
       }
     ]
   }

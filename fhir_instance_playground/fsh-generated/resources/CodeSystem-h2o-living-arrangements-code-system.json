@@ -1,11 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "id": "h2o-living-arrangements-code-system",
-  "url": "https://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem",
   "status": "draft",
   "content": "complete",
-  "version": "0.0.1+2022-04-20",
   "name": "H2OHouseholdCodeSystem",
+  "id": "h2o-living-arrangements-code-system",
+  "title": "H2O LivingArrangements (Sociodemographics)",
+  "version": "0.0.1+2022-04-20",
+  "url": "https://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem",
   "concept": [
     {
       "code": "single",
@@ -51,5 +52,6 @@
         }
       ]
     }
-  ]
+  ],
+  "count": 4
 }
