@@ -16,7 +16,7 @@
     {
       "code": "1",
       "display": "Primary education",
-      "definition": "Programmes at ISCED level 1, or primary education, are typically designed to provide students with fundamental skills in reading, writing and mathematics (i.e. literacy and numeracy) and establish a solid foundation for learning and understanding core areas of knowledge, personal and social development, in preparation for lower secondary education. It focuses on learning at a basic level of complexity with little, if any, specialisation. (source: UN, ISCED-2011, 2008, http://dx.doi.org/10.15220/978-92-9189-123-8-en)"
+      "definition": "Programmes at ISCED level 1, or primary education, are typically designed to provide students with fundamental skills in reading, writing and mathematics (i.e. literacy and numeracy) and establish a solid foundation for learning and understanding core areas of knowledge, personal and social development, in preparation for lower secondary education. It focuses on learning at a basic level of complexity with little, if any, specialization. (source: UN, ISCED-2011, 2008, http://dx.doi.org/10.15220/978-92-9189-123-8-en)"
     },
     {
       "code": "2",
@@ -31,7 +31,7 @@
     {
       "code": "4",
       "display": "Post-secondary non-tertiary education",
-      "definition": "Post-secondary non-tertiarcy education provides learning experiences building on secondary education, preparing for labour market entry as well as tertiary education. It aims at the individual acquisition of knowledge, skills and competencies lower than the level of complexity characteristic of tertiary education. (source: UN, ISCED-2011, 2008, http://dx.doi.org/10.15220/978-92-9189-123-8-en)"
+      "definition": "Post-secondary non-tertiary education provides learning experiences building on secondary education, preparing for labour market entry as well as tertiary education. It aims at the individual acquisition of knowledge, skills and competencies lower than the level of complexity characteristic of tertiary education. (source: UN, ISCED-2011, 2008, http://dx.doi.org/10.15220/978-92-9189-123-8-en)"
     },
     {
       "code": "5",
@@ -52,8 +52,13 @@
       "code": "8",
       "display": "Doctorate or equivalent",
       "definition": "Programmes at ISCED level 8, or doctoral or equivalent level, are designed primarily to lead to an advanced research qualification. Programmes at this ISCED level are devoted to advanced study and original research and are typically offered only by research-oriented tertiary educational institutions such as universities. Doctoral programmes exist in both academic and professional fields. (source: UN, ISCED-2011, 2008, http://dx.doi.org/10.15220/978-92-9189-123-8-en)"
+    },
+    {
+      "code": "9",
+      "display": "Not elsewhere classified",
+      "definition": "Programmes which cannot properly be classified with other ISCED levels"
     }
   ],
-  "description": "The International Standard Classification of Education (ISCED) belongs to the United Nations International Family of Economic and Social Classifications, which are applied in statistics worldwide with the purpose of assembling, compiling and analysing cross-nationally comparable data. ISCED is the reference classification for organizing education programmes and related qualifications by education levels and fields. (UN, 2012, see: http://dx.doi.org/10.15220/978-92-9189-123-8-en)",
-  "count": 9
+  "description": "The International Standard Classification of Education (ISCED) belongs to the United Nations International Family of Economic and Social Classifications, which are applied in statistics worldwide with the purpose of assembling, compiling and analyzing cross-nationally comparable data. ISCED is the reference classification for organizing education programmes and related qualifications by education levels and fields. (UN, 2012, see: http://dx.doi.org/10.15220/978-92-9189-123-8-en)",
+  "count": 10
 }

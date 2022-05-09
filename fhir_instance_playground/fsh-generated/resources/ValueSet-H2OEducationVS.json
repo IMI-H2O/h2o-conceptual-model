@@ -24,6 +24,10 @@
             "code": "2",
             "designation": [
               {
+                "language": "de-DE",
+                "value": "Förder- / Haupt- / Volksschule"
+              },
+              {
                 "language": "de-AT",
                 "value": "Hauptschule, NMS, AHS Unterstufe"
               }
@@ -32,6 +36,10 @@
           {
             "code": "3",
             "designation": [
+              {
+                "language": "de-DE",
+                "value": "Realschule / POS / MSA"
+              },
               {
                 "language": "de-AT",
                 "value": "AHS Oberstufe, BHS, BMS, Lehre"
