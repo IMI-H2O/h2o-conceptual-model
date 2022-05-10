@@ -11,31 +11,30 @@ This page presents the non-final partial models of the [overview model](https://
 
 
 ## Appointment Model
-![Appointment Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/blob/main/models/appointment.puml)
-
+![Appointment Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/appointment.puml)
 
 ## Encounter Model
-![Encounter Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models/encounter.puml)
+![Encounter Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/encounter.puml)
 
 
 ## Observation Model
-![Observation Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models/observation.puml)
+![Observation Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/observation.puml)
 
 
 ## ObservationDefinition Model
-![ObservationDefinition Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models/observationdefinition.puml)
+![ObservationDefinition Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/observationdefinition.puml)
 
 
 ## Patient Model
-![Patient Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models/patient.puml)
+![Patient Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/patient.puml)
 
 
 ## Questionnaire Model
-![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models/questionnaire.puml)
+![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/questionnaire.puml)
 
 
 ## ValueSet Model
-![ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models/value_set.puml)
+![ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/value_set.puml)
 
 
 ## Overview Model
