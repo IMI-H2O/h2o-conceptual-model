@@ -1,6 +1,6 @@
 # H2O FHIR-Based Conceptual Model
 
-This page presents the non-final partial models of the [overview model]() of the H2O project. The models are stored in [PlantUML](https://plantuml.com) files. The complete list of the non-final partial models of the H2O project is as follows:
+This page presents the non-final partial models of the [overview model](https://github.com/IMI-H2O/h2o-conceptual-model) of the H2O project. The models are stored in [PlantUML](https://plantuml.com) files. The complete list of the non-final partial models of the H2O project is as follows:
 - [Appointment Model](https://github.com/IMI-H2O/h2o-conceptual-model/blob/main/models#appointment-model);
 - [Encounter Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#encounter-model);
 - [Observation Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#observation-model);
