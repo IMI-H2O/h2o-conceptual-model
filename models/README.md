@@ -6,7 +6,7 @@ This page presents the non-final partial models of the [overview model](https://
 - [Observation Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#observation-model);
 - [ObservationDefinition Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#observationdefinition-model);
 - [Patient Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#patient-model);
-- [Questionnaire Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#questionnaire-model); 
+- [Questionnaire Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#questionnaire-model); and
 - [ValueSet Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#valueset-model).
 
 
