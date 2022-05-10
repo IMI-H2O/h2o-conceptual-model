@@ -16,10 +16,19 @@ skinparam linetype ortho
 class Patient {
 }
 
+class RelatedPerson {
+}
+
 class Encounter {
 }
 
 class Observation {
+}
+
+class ObservationDefinition {
+}
+
+class QualifiedInterval {
 }
 
 class Questionnaire {
@@ -54,7 +63,7 @@ class ValueSet {
 
 Questionnaire *-- "[0..*]" QuestionnaireItem : item
 QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
-QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
+QuestionnaireItem -l- "[0..1]" ValueSet : answerValueSet
 
 
 QuestionnaireResponse -- "[0..1]" Questionnaire : questionnaire
@@ -69,9 +78,20 @@ Encounter -- "[0..1]" Patient: subject
 Observation -- "[0..1]" Patient: subject
 Observation -- "[0..1]" Encounter: encounter
 Observation -- "[0..*]" QuestionnaireResponse: derivedFrom
+Observation *-- "[0..*]" RelatedPerson : performer
+Observation *-- "[0..*]" Practitioner : performer
 
+ObservationDefinition *-- "[0..*]" QualifiedInterval : qualifiedInterval
+ObservationDefinition -- "[0..1]" ValueSet : validCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : normalCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : abnormalCodedValueSet
+ObservationDefinition -- "[0..1]" ValueSet : criticalCodedValueSet
+Observation -- "[0..*]" ObservationDefinition : instantiates
+
+RelatedPerson *-- "[1..1]" Patient : patient
 
 ' ========================================
 ' end: definition of associations
 ' ========================================
 @enduml
+
