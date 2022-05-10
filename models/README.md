@@ -22,7 +22,7 @@ This page presents the non-final partial models of the [overview model](https://
 
 
 ## ObservationDefinition Model
-![ObservationDefinition Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/observationdefinition.puml)
+![ObservationDefinition Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/observation_definition.puml)
 
 
 ## Patient Model
