@@ -12,7 +12,7 @@ The conceptual model of H2O will be published here. To foster maintainability a 
 
 
 ## Appointment Model
-![Appointment Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/appointment.puml)
+![Appointment Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/models/appointment.puml)
 
 
 ## Encounter Model
