@@ -51,7 +51,7 @@ ObservationDefinition -- "[0..1]" ValueSet : validCodedValueSet
 ObservationDefinition -- "[0..1]" ValueSet : normalCodedValueSet
 ObservationDefinition -- "[0..1]" ValueSet : abnormalCodedValueSet
 ObservationDefinition -- "[0..1]" ValueSet : criticalCodedValueSet
-Observation -- "[0..*]" ObservationDefinition : basedOn
+Observation -- "[0..*]" ObservationDefinition : instantiates
 
 ' ========================================
 ' end: definition of associations
