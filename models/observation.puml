@@ -20,8 +20,8 @@ class Component {
   interpretation : CodeableConcept [0..*] « ObservationInterpretationCodes+ »
 }
 
-class Encounter {
-}
+'class Encounter {
+'}
 
 class Observation {
   identifier : Identifier [0..*]
@@ -57,7 +57,7 @@ class QuestionnaireResponse {
 Observation *-- "[0..*]" Component : component
 Observation *-- "[0..*]" ReferenceRange : referenceRange
 Component *-- "[0..*]" ReferenceRange : referenceRange
-Observation -- "[0..1]" Encounter : encounter
+'Observation -- "[0..1]" Encounter : encounter
 Observation -- "[0..1]" Patient : subject
 Observation -- "[0..*]" QuestionnaireResponse : derivedFrom
 
