@@ -28,10 +28,10 @@ skinparam linetype ortho
 '  preferred : boolean [0..1]
 '}
 
-'class Link {
-'  other : Reference [1..1] « Patient|RelatedPerson »
-'  type : code [1..1] « LinkType! »
-'}
+class Link {
+  other : Reference [1..1] « Patient|RelatedPerson »
+  type : code [1..1] « LinkType! »
+}
 
 class Patient {
   identifier : Identifier [0..*]
@@ -60,7 +60,7 @@ class Patient {
 ' start: definition of associations
 ' ========================================
 
-'Patient *-- "[0..*]" Link : link
+Patient *-- "[0..*]" Link : link
 'Patient *-- "[0..*]" Contact : contact
 'Patient *-- "[0..*]" Communication : communication
 
