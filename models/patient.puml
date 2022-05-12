@@ -36,17 +36,17 @@ class Link {
 class Patient {
   identifier : Identifier [0..*]
   active : boolean [0..1]
-  name : HumanName [0..*]
-  telecom : ContactPoint [0..*]
+'  name : HumanName [0..*]
+'  telecom : ContactPoint [0..*]
   gender : code [0..1] « AdministrativeGender! »
   birthDate : date [0..1]
-  deceased[x] : Type [0..1] « boolean|dateTime »
+'  deceased[x] : Type [0..1] « boolean|dateTime »
   address : Address [0..*]
-  maritalStatus : CodeableConcept [0..1] « Marital Status + »
-  multipleBirth[x] : Type [0..1] « boolean|integer »
-  photo : Attachment [0..*]
-  generalPractitioner : Reference [0..*] « Organization|Practitioner|PractitionerRole »
-  managingOrganization : Reference [0..1] « Organization »
+'  maritalStatus : CodeableConcept [0..1] « Marital Status + »
+'  multipleBirth[x] : Type [0..1] « boolean|integer »
+'  photo : Attachment [0..*]
+'  generalPractitioner : Reference [0..*] « Organization|Practitioner|PractitionerRole »
+'  managingOrganization : Reference [0..1] « Organization »
 }
 
 ' ========================================
