@@ -20,8 +20,15 @@ class ObservationDefinition {
   permittedDataType: code [0..*]
   multipleResultsAllowed: boolean [0..1]
   preferredReportName: string [0..1]
-  quantitativeDetails.unit: CodeableConcept [0..1]
+'  quantitativeDetails.unit: CodeableConcept [0..1]
   ...
+}
+
+class QualifiedDetails {
+  customaryUnit : CodeableConcept [0..1] « UCUMCodes+ »
+  unit : CodeableConcept [0..1] « UCUMCodes+ »
+  conversionFactor : decimal [0..1]
+  decimalPrecision : integer [0..1]
 }
 
 class QualifiedInterval {
@@ -47,6 +54,7 @@ class Observation {
 ' ========================================
 
 ObservationDefinition *-- "[0..*]" QualifiedInterval : qualifiedInterval
+ObservationDefinition *-- "[0..1]" QualifiedDetails : qualifiedDetails
 ObservationDefinition -- "[0..1]" ValueSet : validCodedValueSet
 ObservationDefinition -- "[0..1]" ValueSet : normalCodedValueSet
 ObservationDefinition -- "[0..1]" ValueSet : abnormalCodedValueSet
