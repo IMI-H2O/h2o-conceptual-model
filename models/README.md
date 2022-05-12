@@ -6,6 +6,7 @@ This page presents the non-final partial models of the [overview model](https://
 - [Observation Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#observation-model);
 - [ObservationDefinition Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#observationdefinition-model);
 - [Patient Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#patient-model);
+- [Practitioner Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#practitioner-model);
 - [Questionnaire Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#questionnaire-model); and
 - [ValueSet Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#valueset-model).
 
@@ -27,6 +28,10 @@ This page presents the non-final partial models of the [overview model](https://
 
 ## Patient Model
 ![Patient Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/patient.puml)
+
+
+## Practitioner Model
+![Practitioner Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/practitoner.puml)
 
 
 ## Questionnaire Model
