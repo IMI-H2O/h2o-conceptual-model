@@ -1,0 +1,36 @@
+@startuml
+' ========================================
+' start: configuration
+' ========================================
+
+skinparam linetype ortho
+
+' ========================================
+' end: configuration
+' ========================================
+
+' ========================================
+' start: definition of entities/classes
+' ========================================
+
+class RelatedPerson {
+  identifier : Identifier [0..*]
+  active : boolean [0..1]
+  relationship : CodeableConcept [0..*] « PatientRelationshipType? »
+  period : Period [0..1]
+}
+
+' ========================================
+' end: definition of entities/classes
+' ========================================
+
+' ========================================
+' start: definition of associations
+' ========================================
+
+RelatedPerson -- "[1..1]" Patient : patient
+
+' ========================================
+' end: definition of associations
+' ========================================
+@enduml
