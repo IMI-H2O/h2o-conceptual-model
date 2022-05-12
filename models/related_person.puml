@@ -28,7 +28,7 @@ class RelatedPerson {
 ' start: definition of associations
 ' ========================================
 
-RelatedPerson -- "[1..1]" Patient : patient
+RelatedPerson -r- "[1..1]" Patient : patient
 
 ' ========================================
 ' end: definition of associations
