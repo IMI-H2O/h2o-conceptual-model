@@ -30,7 +30,7 @@ skinparam linetype ortho
 
 class Link {
   other : Reference [1..1] « Patient|RelatedPerson »
-  type : code [1..1] « LinkType! »
+'  type : code [1..1] « LinkType! »
 }
 
 class Patient {
