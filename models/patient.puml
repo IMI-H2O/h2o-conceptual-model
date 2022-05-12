@@ -41,7 +41,7 @@ class Patient {
   gender (sex) : code [0..1] « AdministrativeGender! »
   birthDate (yearOfBirth) : date [0..1]
   (education) : NewEducationResource
-  (ethnicity) : NewEthnicityResource
+'  (ethnicity) : NewEthnicityResource --> Observation
   (household) : NewHouseholdResource
 '  deceased[x] : Type [0..1] « boolean|dateTime »
   address (zipCode) : Address [0..*]
