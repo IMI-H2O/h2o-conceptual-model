@@ -13,35 +13,38 @@ skinparam linetype ortho
 ' start: definition of entities/classes
 ' ========================================
 
-class Contact {
-  relationship : CodeableConcept [0..*] « PatientContactRelationship+ »
-  name : HumanName [0..1]
-  telecom : ContactPoint [0..*]
-  address : Address [0..1]
-  gender : code [0..1] « AdministrativeGender! »
-  organization : Reference [0..1] « Organization »
-  period : Period [0..1]
-}
+'class Contact {
+'  relationship : CodeableConcept [0..*] « PatientContactRelationship+ »
+'  name : HumanName [0..1]
+'  telecom : ContactPoint [0..*]
+'  address : Address [0..1]
+'  gender : code [0..1] « AdministrativeGender! »
+'  organization : Reference [0..1] « Organization »
+'  period : Period [0..1]
+'}
 
-class Communication {
-  language : CodeableConcept [1..1] « CommonLanguages? »
-  preferred : boolean [0..1]
-}
+'class Communication {
+'  language : CodeableConcept [1..1] « CommonLanguages? »
+'  preferred : boolean [0..1]
+'}
 
-class Link {
-  other : Reference [1..1] « Patient|RelatedPerson »
-  type : code [1..1] « LinkType! »
-}
+'class Link {
+'  other : Reference [1..1] « Patient|RelatedPerson »
+'  type : code [1..1] « LinkType! »
+'}
 
 class Patient {
   identifier : Identifier [0..*]
   active : boolean [0..1]
 '  name : HumanName [0..*]
 '  telecom : ContactPoint [0..*]
-  gender : code [0..1] « AdministrativeGender! »
-  birthDate : date [0..1]
+  gender (sex) : code [0..1] « AdministrativeGender! »
+  birthDate (yearOfBirth) : date [0..1]
+  (education) : NewEducationResource
+  (ethnicity) : NewEthnicityResource
+  (household) : NewHouseholdResource
 '  deceased[x] : Type [0..1] « boolean|dateTime »
-  address : Address [0..*]
+  address (zipCode) : Address [0..*]
 '  maritalStatus : CodeableConcept [0..1] « Marital Status + »
 '  multipleBirth[x] : Type [0..1] « boolean|integer »
 '  photo : Attachment [0..*]
@@ -57,9 +60,9 @@ class Patient {
 ' start: definition of associations
 ' ========================================
 
-Patient *-- "[0..*]" Link : link
-Patient *-- "[0..*]" Contact : contact
-Patient *-- "[0..*]" Communication : communication
+'Patient *-- "[0..*]" Link : link
+'Patient *-- "[0..*]" Contact : contact
+'Patient *-- "[0..*]" Communication : communication
 
 ' ========================================
 ' end: definition of associations
