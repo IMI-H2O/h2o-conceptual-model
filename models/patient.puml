@@ -60,7 +60,7 @@ class Patient {
 ' start: definition of associations
 ' ========================================
 
-Patient *-- "[0..*]" Link : link
+Patient *-l- "[0..*]" Link : link
 'Patient *-- "[0..*]" Contact : contact
 'Patient *-- "[0..*]" Communication : communication
 
