@@ -31,7 +31,7 @@ This page presents the non-final partial models of the [overview model](https://
 
 
 ## Practitioner Model
-![Practitioner Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/practitoner.puml)
+![Practitioner Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/practitioner.puml)
 
 
 ## Questionnaire Model
