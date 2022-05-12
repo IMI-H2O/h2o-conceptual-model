@@ -39,7 +39,7 @@ This page presents the non-final partial models of the [overview model](https://
 ![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/questionnaire.puml)
 
 
-## Questionnaire Model
+## RelatedPerson Model
 ![RelatedPerson Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/related_person.puml)
 
 
