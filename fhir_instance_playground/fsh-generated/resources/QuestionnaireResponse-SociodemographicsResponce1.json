@@ -14,7 +14,7 @@
   },
   "item": [
     {
-      "linkId": "1",
+      "linkId": "YearOfBirth",
       "answer": [
         {
           "valueInteger": 1999
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "linkId": "2",
+      "linkId": "SEX",
       "answer": [
         {
           "valueCoding": {
@@ -33,23 +33,23 @@
       ]
     },
     {
-      "linkId": "3",
+      "linkId": "HEIGHTPAT",
       "answer": [
         {
-          "valueInteger": 175
+          "valueDecimal": 175
         }
       ]
     },
     {
-      "linkId": "4",
+      "linkId": "WEIGHTPAT",
       "answer": [
         {
-          "valueInteger": 68
+          "valueDecimal": 68
         }
       ]
     },
     {
-      "linkId": "5",
+      "linkId": "EducationLevel",
       "answer": [
         {
           "valueCoding": {
@@ -60,7 +60,7 @@
       ]
     },
     {
-      "linkId": "6",
+      "linkId": "LivingArrangements",
       "answer": [
         {
           "valueCoding": {
@@ -71,7 +71,7 @@
       ]
     },
     {
-      "linkId": "7",
+      "linkId": "ZIPCODE",
       "answer": [
         {
           "valueInteger": 10101

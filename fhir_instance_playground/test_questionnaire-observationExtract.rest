@@ -1,0 +1,126 @@
+# This file is used with 'REST Client' VSCode Extension, and
+# uses the TelstraHealth https://qforms-server.azurewebsites.net/ public FHIR server
+# to demonstrate the Observation based extraction of Observations from Questionnaire responses
+
+# Other supported servers would be http://qforms-server.azurewebsites.net/QuestionnaireResponse
+# I was not able to get a working example set up there, at this point in time no other available
+# servers which support $extract are known 
+
+### EXAMPLE
+### GET existing questionnaire and questionnaireResponse
+GET https://sqlonfhir-r4.azurewebsites.net/fhir/Questionnaire/prac-ext-demo
+###
+GET https://sqlonfhir-r4.azurewebsites.net/fhir/QuestionnaireResponse/a0680f7c05bf407093e9993897832729
+###
+https://sqlonfhir-r4.azurewebsites.net/fhir/QuestionnaireResponse/a0680f7c05bf407093e9993897832729/$extract
+
+
+### TEST
+### CREATE questionnaire resource
+POST https://sqlonfhir-r4.azurewebsites.net/fhir/Questionnaire
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+
+< fsh-generated/resources/Questionnaire-SociodemographicsQuestionnaire.json
+
+### note id and use it in subsequent requests
+@qid = a290be0c93ba4527ad87e753ee53b11f
+
+### CREATE questionnaire response
+POST https://sqlonfhir-r4.azurewebsites.net/fhir/QuestionnaireResponse
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+
+{
+  "resourceType": "QuestionnaireResponse",
+  "status": "completed",
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "questionnaire": "Questionnaire/{{qid}}",
+
+  "item": [
+    {
+      "linkId": "YearOfBirth",
+      "answer": [
+        {
+          "valueInteger": 1999
+        }
+      ]
+    },
+    {
+      "linkId": "SEX",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "female",
+            "system": "http://hl7.org/fhir/administrative-gender"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "HEIGHTPAT",
+      "answer": [
+        {
+          "valueDecimal": 175
+        }
+      ]
+    },
+    {
+      "linkId": "WEIGHTPAT",
+      "answer": [
+        {
+          "valueDecimal": 68
+        }
+      ]
+    },
+    {
+      "linkId": "EducationLevel",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "master",
+            "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OEducationLevelCodeSystem"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "LivingArrangements",
+      "answer": [
+        {
+          "valueCoding": {
+            "code": "single",
+            "system": "http://health-outcomes-observatory.eu/fhir/CodeSystem/H2OHouseholdCodeSystem"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "ZIPCODE",
+      "answer": [
+        {
+          "valueInteger": 10101
+        }
+      ]
+    }
+  ]
+}
+
+### again note the id of the questionnaire responce
+@qrid = 176751ae645b44f4855ad8e27002de3f
+
+### get resources
+GET https://sqlonfhir-r4.azurewebsites.net/fhir/Questionnaire/{{qid}}
+###
+GET https://sqlonfhir-r4.azurewebsites.net/fhir/QuestionnaireResponse/{{qrid}}
+### Extract
+GET https://sqlonfhir-r4.azurewebsites.net/fhir/QuestionnaireResponse/{{qrid}}/$extract
+
+
+# CLEAN UP
+###
+DELETE  https://sqlonfhir-r4.azurewebsites.net/fhir/Questionnaire/{{qid}}
+###
+DELETE https://sqlonfhir-r4.azurewebsites.net/fhir/QuestionnaireResponse/{{qrid}}

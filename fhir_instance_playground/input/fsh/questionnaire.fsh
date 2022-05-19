@@ -12,33 +12,49 @@ Usage: #definition
 * experimental = true
 * jurisdiction[+].coding = $Regions#150 "Europe"
 
-* item[+].linkId = "1" // hint: using 'soft indexing' by incrementing with '+' and stay at the index with '='
+* item[+].linkId = "YearOfBirth" // hint: using 'soft indexing' by incrementing with '+' and stay at the index with '='
 * item[=].text = "Year of birth / Geburtsjahr"
 * item[=].type = #integer
 
-* item[+].linkId = "2"
+* item[+].linkId = "SEX"
 * item[=].text = "Sex / Geschlecht"
 * item[=].type = #choice
 * item[=].answerValueSet = Canonical(H2OSexVS)
 
-* item[+].linkId = "3"
-* item[=].type = #integer
+* item[+].linkId = "HEIGHTPAT"
 * item[=].text = "Height / Körpergröße"
+* item[=].type = #decimal
+* item[=].code[+].system = "http://loinc.org"
+* item[=].code[=].code = #8302-2
+* item[=].code[=].display = "Body height"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension[=].valueCoding.system = "http://unitsofmeasure.org"
+* item[=].extension[=].valueCoding.code = #cm
+* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+* item[=].extension[=].valueBoolean = true
 
-* item[+].linkId = "4"
+* item[+].linkId = "WEIGHTPAT"
 * item[=].text = "Weight / Körpergewicht"
-* item[=].type = #integer
+* item[=].type = #decimal
+* item[=].code[+].system = "http://loinc.org"
+* item[=].code[=].code = #29463-7
+* item[=].code[=].display = "Weight"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/questionnaire-unit"
+* item[=].extension[=].valueCoding.system = "http://unitsofmeasure.org"
+* item[=].extension[=].valueCoding.code = #kg
+* item[=].extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-observationExtract"
+* item[=].extension[=].valueBoolean = true
 
-* item[+].linkId = "5"
+* item[+].linkId = "EducationLevel"
 * item[=].text = "Education / Höchster Schulabschluß"
 * item[=].type = #choice
 * item[=].answerValueSet = Canonical(H2OEducationVS)
 
-* item[+].linkId = "6"
+* item[+].linkId = "LivingArrangements"
 * item[=].text = "Household / Wohnsituation"
 * item[=].type = #choice
 * item[=].answerValueSet = Canonical(H2OHouseholdVS)
 
-* item[+].linkId = "7"
+* item[+].linkId = "ZIPCODE"
 * item[=].text = "ZIP Code / Postleitzahl"
 * item[=].type = #integer
