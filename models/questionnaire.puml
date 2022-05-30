@@ -19,7 +19,7 @@ class Questionnaire {
   version : string [0..1]
   name : string [0..1]
   title : string [0..1]
-  status : code [1..1]
+  status : code [1..1] « draft | active | retired | unknown »
   ...
 }
 
