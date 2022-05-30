@@ -68,16 +68,9 @@ class ValueSet {
   name : string [0..1]
   title : string [0..1]
   status : code [1..1] « draft | active | retired | unknown »
-  experimental : boolean [0..1]
   date : dateTime [0..1]
   publisher : string [0..1]
-  contact : ContactDetail [0..*]
   description : markdown [0..1]
-  useContext : UsageContext [0..*]
-  jurisdiction : CodeableConcept [0..*] « Jurisdiction ValueSet+ »
-  immutable : boolean [0..1]
-  purpose : markdown [0..1]
-  copyright : markdown [0..1]
 }
 
 ' ========================================
