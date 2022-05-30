@@ -20,10 +20,17 @@ class Questionnaire {
   name : string [0..1]
   title : string [0..1]
   status : code [1..1] « draft | active | retired | unknown »
+  authored : dateTime [0..1]
+}
+
+class QuestionnaireResponse {
+  identifier : Identifier [0..*]
+  status : code [1..1] « in-progress | completed | amended | entered-in-error | stopped »
   date : dateTime [0..1]
   publisher : string [0..1]
   description : markdown [0..1]
 }
+
 
 class QuestionnaireItem {
   linkId : string [1..1]
@@ -43,12 +50,22 @@ class QuestionnaireResponseItem {
 
 class ValueSet {
   }
-  
+
+class Patient {
+  }
+
+class Encounter {
+  }
+
 class AnswerOption {
   answerX : Type [1..1] « boolean | decimal | ... »
 }
  
 class Initial {
+  valueX : Type [1..1] « boolean | decimal | ... »
+}
+
+class Answer {
   valueX : Type [1..1] « boolean | decimal | ... »
 }
 
@@ -95,6 +112,8 @@ QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
 
 QuestionnaireResponse *-- "[0..1]" Questionnaire : questionnaire
 QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
+QuestionnaireResponse -- "[0..1]" Patient : subject
+QuestionnaireResponse -- "[0..1]" Encounter : encounter
 QuestionnaireResponseItem *-- "[0..*]" QuestionnaireResponseItem : item
 QuestionnaireResponseItem -- "[1..1]" QuestionnaireItem : linkId
 QuestionnaireResponseItem *-- "[0..*]" Answer : answer
