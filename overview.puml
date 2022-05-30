@@ -67,6 +67,8 @@ QuestionnaireItem -l- "[0..1]" ValueSet : answerValueSet
 
 
 QuestionnaireResponse -- "[0..1]" Questionnaire : questionnaire
+QuestionnaireResponse -- "[0..1]" Patient : subject
+QuestionnaireResponse -- "[0..1]" Encounter : encounter
 QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
 QuestionnaireResponseItem *-- "[0..*]" QuestionnaireResponseItem : item
 QuestionnaireResponseItem -- "[1..1]" QuestionnaireItem : linkId
