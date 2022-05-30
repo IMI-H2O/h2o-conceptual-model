@@ -45,9 +45,11 @@ class ValueSet {
   
 class AnswerOption {
   answer[x] : « boolean | decimal | integer | date | ... »
-  
+}
+ 
 class Initial {
   value[x] : « boolean | decimal | integer | date | ... »
+}
 
 ' ========================================
 ' end: definition of entities/classes
