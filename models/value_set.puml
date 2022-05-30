@@ -67,7 +67,7 @@ class ValueSet {
   version : string [0..1]
   name : string [0..1]
   title : string [0..1]
-  status : code [1..1] « PublicationStatus! »
+  status : code [1..1] « draft | active | retired | unknown »
   experimental : boolean [0..1]
   date : dateTime [0..1]
   publisher : string [0..1]
