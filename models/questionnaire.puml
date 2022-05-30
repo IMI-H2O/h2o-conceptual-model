@@ -44,11 +44,11 @@ class ValueSet {
   }
   
 class AnswerOption {
-  answer[x] : « boolean | decimal | integer | date | ... »
+  answer[x] : Type [1..1] « boolean | decimal | integer | date | ... »
 }
  
 class Initial {
-  value[x] : « boolean | decimal | integer | date | ... »
+  value[x] : Type [1..1] « boolean | decimal | integer | date | ... »
 }
 
 ' ========================================
