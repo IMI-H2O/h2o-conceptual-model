@@ -33,6 +33,7 @@ class QuestionnaireItem {
   itemControl : Extension questionnaire-itemControl [0..1]
   minValue : Extension minValue [0..1]
   maxValue : Extension maxValue [0..1]
+  unit : Extension questionnaire-unit [0..1]
 }
 
 
@@ -69,6 +70,10 @@ end note
 
 note right of QuestionnaireItem::maxValue
   predefined FHIR extension http://hl7.org/fhir/StructureDefinition/maxValue
+end note
+
+note right of QuestionnaireItem::unit
+  predefined FHIR extension http://hl7.org/fhir/StructureDefinition/questionnaire-unit
 end note
 
 ' ========================================
