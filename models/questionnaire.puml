@@ -26,9 +26,7 @@ class Questionnaire {
 class QuestionnaireResponse {
   identifier : Identifier [0..*]
   status : code [1..1] « in-progress | completed | amended | entered-in-error | stopped »
-  date : dateTime [0..1]
-  publisher : string [0..1]
-  description : markdown [0..1]
+  authored : dateTime [0..1]
 }
 
 
