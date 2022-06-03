@@ -59,7 +59,7 @@ class Encounter {
   }
 
 class AnswerOption {
-  answerX : Type [1..1] « boolean | decimal | ... »
+  valueX : Type [1..1] « boolean | decimal | ... »
 }
  
 class Initial {
