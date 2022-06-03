@@ -36,6 +36,8 @@ class QuestionnaireItem {
   code : Coding [0..*]
   text : string [0..1]
   type : code [1..1]
+  required : boolean [0..1]
+  repeats : boolean [0..1]
   itemControl : Extension questionnaire-itemControl [0..1]
   minValue : Extension minValue [0..1]
   maxValue : Extension maxValue [0..1]
