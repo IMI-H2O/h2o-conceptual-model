@@ -71,6 +71,11 @@ class Answer {
   valueX : Type [1..1] « integer | date | ... »
 }
 
+class EnableWhen {
+  operator : code [1..1] « exists | = | != | > | < | >= | <= »
+  answerX : Type [1..1] « integer | date | ... »
+}
+
 ' ========================================
 ' end: definition of entities/classes
 ' ========================================
@@ -109,7 +114,8 @@ QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
 QuestionnaireItem *-- "[0..*]" Initial : initial
 QuestionnaireItem *-- "[0..*]" AnswerOption : answerOption
 QuestionnaireItem *-- "[0..*]" EnableWhen : enableWhen
-QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
+EnableWhen -- "[1..1]" ValueSet : answerValueSet
+QuestionnaireItem -- "[0..1]" QuestionnaireItem : question
 
 
 QuestionnaireResponse *-- "[0..1]" Questionnaire : questionnaire
