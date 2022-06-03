@@ -114,8 +114,8 @@ QuestionnaireItem *-- "[0..*]" QuestionnaireItem : item
 QuestionnaireItem *-- "[0..*]" Initial : initial
 QuestionnaireItem *-- "[0..*]" AnswerOption : answerOption
 QuestionnaireItem *-- "[0..*]" EnableWhen : enableWhen
-EnableWhen -- "[1..1]" ValueSet : answerValueSet
-QuestionnaireItem -- "[0..1]" QuestionnaireItem : question
+EnableWhen -- "[1..1]" QuestionnaireItem : question
+QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
 
 
 QuestionnaireResponse *-- "[0..1]" Questionnaire : questionnaire
