@@ -20,7 +20,8 @@ class Questionnaire {
   name : string [0..1]
   title : string [0..1]
   status : code [1..1] « draft | active | retired | unknown »
-  authored : dateTime [0..1]
+  date : dateTime [0..1]
+  description : markdown [0..1]
 }
 
 class QuestionnaireResponse {
