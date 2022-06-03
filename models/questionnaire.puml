@@ -59,15 +59,16 @@ class Encounter {
   }
 
 class AnswerOption {
-  valueX : Type [1..1] « boolean | decimal | ... »
+  valueX : Type [1..1] « integer | date | ... »
+  initialSelected : boolean [0..1]
 }
  
 class Initial {
-  valueX : Type [1..1] « boolean | decimal | ... »
+  valueX : Type [1..1] « integer | date | ... »
 }
 
 class Answer {
-  valueX : Type [1..1] « boolean | decimal | ... »
+  valueX : Type [1..1] « integer | date | ... »
 }
 
 ' ========================================
