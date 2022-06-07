@@ -1,0 +1,131 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "fhir.health-outcomes-observatory.eu",
+  "url": "https://health-outcomes-observatory.eu/fhir/ImplementationGuide/fhir.health-outcomes-observatory.eu",
+  "version": "0.1.0",
+  "name": "H2OFHIRConceptual",
+  "title": "H2O - HL7 FHIR Implementation Guide Example: Used as rolling example to support the design phase of the logical model",
+  "status": "draft",
+  "publisher": "H2O WP2 - Katsch Florian",
+  "contact": [
+    {
+      "name": "H2O WP2 - Katsch Florian",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://examp.le"
+        },
+        {
+          "system": "email",
+          "value": "florian.katsch@dhp.lbg.ac.at"
+        }
+      ]
+    }
+  ],
+  "description": "An example IG that exercises aspects of the H2O FHIR usage, mainly concerned with the Questionnaire and related resources",
+  "packageId": "fhir.health-outcomes-observatory.eu",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.3.0"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "ValueSet/H2OEducationVS"
+        },
+        "name": "Education levels of H2O patients.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/H2OHouseholdVS"
+        },
+        "name": "Living arrangements of H2O patients.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/H2OSexVS"
+        },
+        "name": "Sex of H2O patients.",
+        "description": "Sex of H2O patients.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/h2o-living-arrangements-code-system"
+        },
+        "name": "H2O LivingArrangements (Sociodemographics)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ISCED2011EducationLevels"
+        },
+        "name": "United Nations International Classification of Education (ISCED) 2011 levels.",
+        "description": "The International Standard Classification of Education (ISCED) belongs to the United Nations International Family of Economic and Social Classifications, which are applied in statistics worldwide with the purpose of assembling, compiling and analyzing cross-nationally comparable data. ISCED is the reference classification for organizing education programmes and related qualifications by education levels and fields. (UN, 2012, see: http://dx.doi.org/10.15220/978-92-9189-123-8-en)",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/DoeJane"
+        },
+        "name": "DoeJane",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Encounter/DoeJane1"
+        },
+        "name": "DoeJane1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/H2OEducationVS"
+        },
+        "name": "H2OEducationVS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/SociodemographicsQuestionnaire"
+        },
+        "name": "SociodemographicsQuestionnaire",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "QuestionnaireResponse/SociodemographicsResponce1"
+        },
+        "name": "SociodemographicsResponce1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/h2o-question-library"
+        },
+        "name": "H2O Question Library",
+        "description": "A set of reusable questions used in the H2O context are captured in this Resource, used to create questionnaire instances",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": []
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2022+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "draft"
+      }
+    ]
+  }
+}

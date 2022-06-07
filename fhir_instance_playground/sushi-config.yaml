@@ -1,9 +1,16 @@
 id: fhir.health-outcomes-observatory.eu #todo
 canonical: https://health-outcomes-observatory.eu/fhir #todo
 name: H2O FHIR Conceptual #todo
+title: "H2O - HL7 FHIR Implementation Guide Example: Used as rolling example to support the design phase of the logical model"
+description: An example IG that exercises aspects of the H2O FHIR usage, mainly concerned with the Questionnaire and related resources
 status: draft
 version: 0.1.0
-fhirVersion: 4.0.1
-#copyrightYear: 2022 #IG creation only
-#releaseLabel: draft #IG creation only
-FSHOnly: true # since this initial draft should not attempt to build any IG
+fhirVersion: 4.3.0
+copyrightYear: 2022+ #todo IG creation only
+license: CC0-1.0 #todo
+releaseLabel: draft #todo IG creation only
+FSHOnly: false # since this initial draft should not attempt to build any IG
+publisher:
+  name: H2O WP2 - Katsch Florian
+  url: http://examp.le
+  email: florian.katsch@dhp.lbg.ac.at
