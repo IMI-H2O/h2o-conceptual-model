@@ -36,6 +36,7 @@ class QuestionnaireItem {
   code : Coding [0..*]
   text : string [0..1]
   type : code [1..1]
+  enableBehavior : code [0..1] « all | any »
   required : boolean [0..1]
   repeats : boolean [0..1]
   itemControl : Extension questionnaire-itemControl [0..1]
