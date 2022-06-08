@@ -55,6 +55,9 @@ class ValueSet {
 
 class Patient {
   }
+  
+class Practitioner {
+  }
 
 class Encounter {
   }
@@ -122,6 +125,8 @@ QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
 QuestionnaireResponse *-- "[0..1]" Questionnaire : questionnaire
 QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
 QuestionnaireResponse -- "[0..1]" Patient : subject
+QuestionnaireResponse -- "[0..1]" Patient : source
+QuestionnaireResponse -- "[0..1]" Practitioner : source
 QuestionnaireResponse -- "[0..1]" Encounter : encounter
 QuestionnaireResponseItem *-- "[0..*]" QuestionnaireResponseItem : item
 QuestionnaireResponseItem -- "[1..1]" QuestionnaireItem : linkId
