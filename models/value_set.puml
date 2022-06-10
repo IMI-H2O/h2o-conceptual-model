@@ -73,6 +73,7 @@ ValueSet  *-- "[0..1]" Expansion : expansion
 ValueSet  *-- "[0..1]" Composition : compose
 Expansion *-- "[0..*]" ConceptExpanded : contains
 ConceptExpanded *-- "[0..*]" Designation : designation
+ConceptExpanded *-- "[0..*]" ConceptExpanded : contains
 Concept *-- "[0..*]" Designation : designation
 ConceptDefinition *-- "[0..*]" ValueSet : valueSet
 ConceptDefinition *-- "[0..*]" Concept : concept
