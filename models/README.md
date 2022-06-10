@@ -9,7 +9,7 @@ This page presents the non-final partial models of the [overview model](https://
 - [Practitioner Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#practitioner-model);
 - [Questionnaire Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#questionnaire-model);
 - [RelatedPerson Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#relatedperson-model); and
-- [ValueSet Model](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#valueset-model).
+- [ValueSet Model (https://www.hl7.org/fhir/valueset.html)](https://github.com/IMI-H2O/h2o-conceptual-model/tree/main/models#valueset-model).
 
 
 ## Appointment Model
@@ -44,7 +44,7 @@ This page presents the non-final partial models of the [overview model](https://
 
 
 ## ValueSet Model
-![ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/value_set.puml)
+![ValueSet Model (https://www.hl7.org/fhir/valueset.html)](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/value_set.puml)
 
 
 <!--
