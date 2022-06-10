@@ -43,7 +43,7 @@ This page presents the non-final partial models of the [overview model](https://
 ![RelatedPerson Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/related_person.puml)
 
 
-## ValueSet Model
+## ValueSet Model (https://www.hl7.org/fhir/valueset.html)
 ![ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/value_set.puml)
 
 
