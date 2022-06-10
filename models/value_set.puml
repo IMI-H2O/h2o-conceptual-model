@@ -14,51 +14,40 @@ skinparam linetype ortho
 ' ========================================
 
 class Designation {
-  language : code [0..1] « CommonLanguages? »
-  use : Coding [0..1] « DesignationUse+ »
+  language : code [0..1]
+  use : Coding [0..1]
   value : string [1..1]
 }
 
 class Expansion {
   identifier : uri [0..1]
   timestamp : dateTime [1..1]
-  total : integer [0..1]
-  offset : integer [0..1]
 }
 
-class ConceptReference {
+class Concept {
   code : code [1..1]
   display : string [0..1]
 }
 
-class ConceptSet {
+class ConceptDefinition {
   system : uri [0..1]
   version : string [0..1]
 }
 
-class Contains {
+class ConceptExpanded {
   system : uri [0..1]
-  abstract : boolean [0..1]
-  inactive : boolean [0..1]
   version : string [0..1]
   code : code [0..1]
   display : string [0..1]
 }
 
-class Compose {
-  lockedDate : date [0..1]
-  inactive : boolean [0..1]
+class Composition {
 }
 
 class Filter {
   property : code [1..1]
   op : code [1..1] « FilterOperator! »
   value : string [1..1]
-}
-
-class Parameter {
-  name : string [1..1]
-  value[x] : Type [0..1] « string|boolean|integer|decimal|uri|code|dateTime »
 }
 
 class ValueSet {
@@ -82,17 +71,15 @@ class ValueSet {
 ' ========================================
 
 ValueSet  *-- "[0..1]" Expansion : expansion
-ValueSet  *-- "[0..1]" Compose : compose
-Expansion *-- "[0..*]" Parameter : parameter
-Expansion *-- "[0..*]" Contains : contains
-Contains *-- "[0..*]" Contains : contains
-Contains *-- "[0..*]" Designation : designation
-ConceptReference *-- "[0..*]" Designation : designation
-ConceptSet *-- "[0..*]" ValueSet : valueSet
-ConceptSet *-- "[0..*]" ConceptReference : concept
-ConceptSet *-- "[0..*]" Filter : filter
-Compose *-- "[1..*]" ConceptSet : include
-Compose *-- "[0..*]" ConceptSet : exclude
+ValueSet  *-- "[0..1]" Composition : compose
+Expansion *-- "[0..*]" ConceptExpanded : contains
+ConceptExpanded *-- "[0..*]" Designation : designation
+Concept *-- "[0..*]" Designation : designation
+ConceptDefinition *-- "[0..*]" ValueSet : valueSet
+ConceptDefinition *-- "[0..*]" Concept : concept
+ConceptDefinition *-- "[0..*]" Filter : filter
+Composition *-- "[1..*]" ConceptDefinition : include
+Composition *-- "[0..*]" ConceptDefinition : exclude
 
 ' ========================================
 ' end: definition of associations
