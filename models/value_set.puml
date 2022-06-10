@@ -58,7 +58,6 @@ class ValueSet {
   title : string [0..1]
   status : code [1..1] « draft | active | retired | unknown »
   date : dateTime [0..1]
-  publisher : string [0..1]
   description : markdown [0..1]
 }
 
