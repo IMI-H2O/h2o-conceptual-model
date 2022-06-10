@@ -84,4 +84,18 @@ Composition *-- "[0..*]" ConceptDefinition : exclude
 ' ========================================
 ' end: definition of associations
 ' ========================================
+
+
+' ========================================
+' start: definition of notes
+' ========================================
+
+note right of ValueSet
+  https://www.hl7.org/fhir/valueset.html
+end note
+
+' ========================================
+' end: definition of notes
+' ========================================
+
 @enduml
