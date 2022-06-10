@@ -46,7 +46,7 @@ class Composition {
 
 class Filter {
   property : code [1..1]
-  op : code [1..1] « FilterOperator! »
+  op : code [1..1]
   value : string [1..1]
 }
 
