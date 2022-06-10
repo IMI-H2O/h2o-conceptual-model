@@ -90,10 +90,6 @@ Composition *-- "[0..*]" ConceptDefinition : exclude
 ' start: definition of notes
 ' ========================================
 
-note right of ValueSet
-  <a href="https://www.hl7.org/fhir/valueset.html">See specification in FHIR</a>
-end note
-
 ' ========================================
 ' end: definition of notes
 ' ========================================
