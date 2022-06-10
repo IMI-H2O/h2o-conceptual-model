@@ -91,7 +91,7 @@ Composition *-- "[0..*]" ConceptDefinition : exclude
 ' ========================================
 
 note right of ValueSet
-  https://www.hl7.org/fhir/valueset.html
+  <a href="https://www.hl7.org/fhir/valueset.html">See specification in FHIR</a>
 end note
 
 ' ========================================
