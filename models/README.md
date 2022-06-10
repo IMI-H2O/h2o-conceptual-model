@@ -13,33 +13,41 @@ This page presents the non-final partial models of the [overview model](https://
 
 
 ## Appointment Model
+### See https://www.hl7.org/fhir/appointment.html for FHIR specification
 ![Appointment Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/appointment.puml)
 
 ## Encounter Model
+### See https://www.hl7.org/fhir/encounter.html for FHIR specification
 ![Encounter Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/encounter.puml)
 
 
 ## Observation Model
+### See https://www.hl7.org/fhir/observation.html for FHIR specification
 ![Observation Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/observation.puml)
 
 
 ## ObservationDefinition Model
+### See https://www.hl7.org/fhir/observationdefinition.html for FHIR specification
 ![ObservationDefinition Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/observation_definition.puml)
 
 
 ## Patient Model
+### See https://www.hl7.org/fhir/patient.html for FHIR specification
 ![Patient Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/patient.puml)
 
 
 ## Practitioner Model
+### See https://www.hl7.org/fhir/practitioner.html for FHIR specification
 ![Practitioner Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/practitioner.puml)
 
 
 ## Questionnaire Model
+### See https://www.hl7.org/fhir/questionnaire.html for FHIR specification
 ![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/questionnaire.puml)
 
 
 ## RelatedPerson Model
+### See https://www.hl7.org/fhir/relatedperson.html for FHIR specification
 ![RelatedPerson Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/related_person.puml)
 
 
