@@ -1,0 +1,311 @@
+{
+  "id": "phq8",
+  "version": "1.0.0",
+  "identifier": [
+    {
+      "value": "phq8",
+      "use": "official"
+    }
+  ],
+  "subjectType": [
+    "Patient"
+  ],
+  "status": "active",
+  "experimental": true,
+  "title": "Patient Health Questionnaire (PHQ-8)",
+  "code": [
+    {
+      "system": "http://loinc.org",
+      "code": "44249-1",
+      "display": "Patient health questionnaire 8 item total score:Score:Pt:^Patient:Qn:Report.PHQ"
+    }
+  ],
+  "resourceType": "Questionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire|2.7"
+    ],
+    "tag": [
+      {
+        "code": "lformsVersion: 29.2.1"
+      }
+    ]
+  },
+  "item": [
+    {
+      "type": "group",
+      "code": [],
+      "required": false,
+      "linkId": "phq8",
+      "text": "Over the past two weeks, how often have you been bothered by any of the following problems",
+      "item": [
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44250-9"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "phq8_1",
+          "text": "1. Little interest or pleasure in doing things?",
+          "answerOption": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "Not at all"
+                }
+              ],
+              "valueCoding": {
+                "code": "LA6568-5",
+                "display": "Not at all"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "Several days"
+                }
+              ],
+              "valueCoding": {
+                "code": "LA6569-3",
+                "display": "Several days"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "More than half the days"
+                }
+              ],
+              "valueCoding": {
+                "code": "LA6570-1",
+                "display": "More than half the days"
+              }
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix",
+                  "valueString": "Nearly every day"
+                }
+              ],
+              "valueCoding": {
+                "code": "LA6571-9",
+                "display": "Nearly every day"
+              }
+            }
+          ]
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44255-8"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "FeelingDown",
+          "text": "2. Feeling down, depressed, or hopeless?"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44259-0"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "TroubleSleeping",
+          "text": "3. Trouble falling asleep or staying asleep, or sleeping too much?"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44254-1"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "FeelingTired",
+          "text": "4. Feeling tired or having little energy?"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44251-7"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "BadAppetite",
+          "text": "5. Poor appetite or over eating"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44258-2"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "FeelingBadAboutSelf",
+          "text": "6. Feeling bad about yourself, or that you are a failure or have let yourself or your family down?"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44252-5"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "TroubleConcentrating",
+          "text": "7. Trouble concentrating on things such as reading the newspaper or watching television?"
+        },
+        {
+          "type": "choice",
+          "code": [
+            {
+              "system": "http://loinc.org",
+              "code": "44253-3"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "drop-down",
+                    "display": "Drop down"
+                  }
+                ],
+                "text": "Drop down"
+              }
+            }
+          ],
+          "required": true,
+          "linkId": "MovingSpeaking",
+          "text": "8. Moving or speaking so slowly that other people have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?"
+        }
+      ]
+    }
+  ]
+}

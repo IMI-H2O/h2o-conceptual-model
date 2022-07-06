@@ -1,0 +1,514 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "covid19_symptoms",
+  "identifier": [{
+    "use": "official",
+    "value": "covid19_symptoms"
+  }],
+  "version": "1.0.0",
+  "title": "COVID19 Symptoms",
+  "status": "active",
+  "experimental": true,
+  "subjectType": ["Patient"],
+  "code": [{
+    "system": "https://sample-domain.org/system/code/covid19_symptoms",
+    "code": "sample_code",
+    "display": "COVID19 Symptoms"
+  }],
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "severity",
+      "name": "Severity",
+      "status": "active",
+      "description": "",
+      "compose": {
+        "include": [{
+          "system": "https://sample-domain.org/system",
+          "concept": [
+            {
+              "code": "0",
+              "display": "None"
+            },
+            {
+              "code": "1",
+              "display": "Mild"
+            },
+            {
+              "code": "2",
+              "display": "Moderate"
+            },
+            {
+              "code": "3",
+              "display": "Severe"
+            }
+          ]
+        }]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "mucus",
+      "name": "Mucus Color",
+      "status": "active",
+      "description": "",
+      "compose": {
+        "include": [{
+          "system": "https://sample-domain.org/system/code/covid19_symptoms",
+          "concept": [
+            {
+              "code": "1",
+              "display": "Mucus is clear"
+            },
+            {
+              "code": "2",
+              "display": "Mucus is white"
+            },
+            {
+              "code": "3",
+              "display": "Mucus is yellow"
+            },
+            {
+              "code": "4",
+              "display": "Mucus has signs of blood"
+            }
+          ]
+        }]
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "changed",
+      "code": [{
+        "system": "https://sample-domain.org/system",
+        "code": "1234"
+      }],
+      "text": "Have there been any changes since last completing this questionnaire:\n\n**First time completing? please select YES**",
+      "type": "boolean"
+    },
+    {
+      "linkId": "symptoms_1",
+      "text": "Have you experienced any of the following:",
+      "type": "group",
+      "enableWhen": [
+        {
+          "answerCoding": {
+            "code": "true"
+          },
+          "question": "changed",
+          "operator": "="
+        }
+      ],
+      "item": [
+        {
+          "linkId": "sym_fever",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "1234-1"
+          }],
+          "text": "Fever (including feeling cold and shivering)?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "sym_cough",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "1234-2"
+          }],
+          "text": "Coughing?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "mucus_q",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "1234-3"
+          }],
+          "text": "Describe phlegm being produced:",
+          "type": "choice",
+          "required": true,
+          "enableWhen": [
+            {
+              "answerCoding": {
+                "code": "0"
+              },
+              "question": "sym_cough",
+              "operator": "!="
+            }
+          ],
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mucus is clear"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Mucus is white"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Mucus is yellow"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "4",
+                "display": "Mucus has signs of blood"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "symptoms_2",
+      "text": "Have you experienced any of the following:",
+      "type": "group",
+      "enableWhen": [
+        {
+          "answerCoding": {
+            "code": "true"
+          },
+          "question": "changed",
+          "operator": "="
+        }
+      ],
+      "item": [
+        {
+          "linkId": "sym_breath",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-1"
+          }],
+          "text": "Breathing difficulties?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "sym_fatigue",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-2"
+          }],
+          "text": "Fatigue?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "sym_anosmia",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-3"
+          }],
+          "text": "Loss of Sense of Smell (Anosmia)?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "#severity"
+        },
+        {
+          "linkId": "sym_nasal_cong",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-4"
+          }],
+          "text": "Nasal Congestion?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "sym_muscle_pain",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-5"
+          }],
+          "text": "Muscle Pain / Joint Pain?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "sym_sore_throat",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-6"
+          }],
+          "text": "Sore Throat?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "sym_headache",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-7"
+          }],
+          "text": "Headache?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "#severity"
+        },
+        {
+          "linkId": "sym_chills",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-8"
+          }],
+          "text": "Chills?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "sym_nausea",
+          "code": [{
+            "system": "https://sample-domain.org/system",
+            "code": "5678-9"
+          }],
+          "text": "Nausea / Vomiting?",
+          "type": "choice",
+          "required": true,
+          "answerOption" : [
+            {
+              "valueCoding" : {
+                "code": "0",
+                "display": "None"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "1",
+                "display": "Mild"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "2",
+                "display": "Moderate"
+              }
+            },
+            {
+              "valueCoding" : {
+                "code": "3",
+                "display": "Severe"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
