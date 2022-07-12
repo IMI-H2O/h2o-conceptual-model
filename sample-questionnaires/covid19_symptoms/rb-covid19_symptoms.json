@@ -1,0 +1,479 @@
+[
+    {
+        "field_name": "changed",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "yesno",
+        "field_label": "Have there been any changes since last completing this questionnaire:\r\n\r\n**First time completing? please select YES**",
+        "select_choices_or_calculations": "",
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": ""
+    },
+    {
+        "field_name": "sym_fever",
+        "form_name": "covid19_symptoms",
+        "section_header": "Have you experienced any of the following:",
+        "field_type": "radio",
+        "field_label": "Fever (including feeling cold and shivering)?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_a_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_cough",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Coughing?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_a_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "mucus_q",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "checkbox",
+        "field_label": "Describe phlegm being produced:",
+        "select_choices_or_calculations": [
+            {
+                "code": "1",
+                "label": "Mucus is clear "
+            },
+            {
+                "code": "2",
+                "label": "Mucus is white "
+            },
+            {
+                "code": "3",
+                "label": "Mucus is yellow "
+            },
+            {
+                "code": "4",
+                "label": "Mucus has signs of blood"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[sym_cough] = '1' or [sym_cough] = '2' or [sym_cough] = '3'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['sym_cough'] ==  '1' || responses['sym_cough'] || responses['sym_cough']"
+    },
+    {
+        "field_name": "sym_breath",
+        "form_name": "covid19_symptoms",
+        "section_header": "Have you experienced any of the following:",
+        "field_type": "radio",
+        "field_label": "Breathing difficulties?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_fatigue",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Fatigue?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_anosmia",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Loss of Sense of Smell (Anosmia)?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_nasal_cong",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Nasal Congestion?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_muscle_pain",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Muscle Pain / Joint Pain?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_sore_throat",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Sore Throat?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_headache",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Headache?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_chills",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Chills?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    },
+    {
+        "field_name": "sym_nausea",
+        "form_name": "covid19_symptoms",
+        "section_header": "",
+        "field_type": "radio",
+        "field_label": "Nausea / Vomiting?",
+        "select_choices_or_calculations": [
+            {
+                "code": "0",
+                "label": "0 None "
+            },
+            {
+                "code": "1",
+                "label": "1 Mild "
+            },
+            {
+                "code": "2",
+                "label": "2 Moderate "
+            },
+            {
+                "code": "3",
+                "label": "3 Severe"
+            }
+        ],
+        "field_note": "",
+        "text_validation_type_or_show_slider_number": "",
+        "text_validation_min": "",
+        "text_validation_max": "",
+        "identifier": "",
+        "branching_logic": "[changed] = '1'",
+        "required_field": "",
+        "custom_alignment": "",
+        "question_number": "",
+        "matrix_group_name": "symptoms_b_cov19",
+        "matrix_ranking": "",
+        "field_annotation": "",
+        "evaluated_logic": "responses['changed'] ==  '1'"
+    }
+]

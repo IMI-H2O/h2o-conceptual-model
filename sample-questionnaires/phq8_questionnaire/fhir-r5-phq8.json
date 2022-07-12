@@ -1,0 +1,157 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "phq8",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Patient Health Questionnaire 8 item (PHQ-8)</div>"
+  },
+  "identifier": [{
+    "use": "official",
+    "value": "phq8"
+  }],
+  "version": "1.0.0",
+  "title": "Patient Health Questionnaire (PHQ-8)",
+  "status": "active",
+  "experimental": true,
+  "subjectType": ["Patient"],
+  "code": [{
+    "system": "http://loinc.org",
+    "code": "44249-1",
+    "display": "Patient health questionnaire 8 item total score:Score:Pt:^Patient:Qn:Report.PHQ"
+  }],
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "LL358-3",
+      "identifier": [
+        {
+          "system": "http://loinc.org",
+          "value": "http://loinc.org/ValueSet/LL358-3"
+        }
+      ],
+      "name": "??",
+      "status": "active",
+      "description": "?? (LL358-3)",
+      "compose": {
+        "include": [{
+          "system": "http://loinc.org",
+          "concept": [
+            {
+              "code": "LA6568-5",
+              "display": "Not at all"
+            },
+            {
+              "code": "LA6569-3",
+              "display": "Several days"
+            },
+            {
+              "code": "LA6570-1",
+              "display": "More than half the days"
+            },
+            {
+              "code": "LA6571-9",
+              "display": "Nearly every day"
+            }
+          ]
+        }]
+      }
+    }
+  ],
+  "item": [
+    {
+      "linkId": "phq8",
+      "text": "Over the past two weeks, how often have you been bothered by any of the following problems",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "phq8_1",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44250-9"
+          }],
+          "text": "1. Little interest or pleasure in doing things?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "#LL358-3"
+        },
+        {
+          "linkId": "FeelingDown",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44255-8"
+          }],
+          "text": "2. Feeling down, depressed, or hopeless?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "LL358-3"
+        },
+        {
+          "linkId": "TroubleSleeping",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44259-0"
+          }],
+          "text": "3. Trouble falling asleep or staying asleep, or sleeping too much?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "LL358-3"
+        },
+        {
+          "linkId": "FeelingTired",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44254-1"
+          }],
+          "text": "4. Feeling tired or having little energy?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "LL358-3"
+        },
+        {
+          "linkId": "BadAppetite",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44251-7"
+          }],
+          "text": "5. Poor appetite or over eating",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "LL358-3"
+        },
+        {
+          "linkId": "FeelingBadAboutSelf",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44258-2"
+          }],
+          "text": "6. Feeling bad about yourself, or that you are a failure or have let yourself or your family down?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "LL358-3"
+        },
+        {
+          "linkId": "TroubleConcentrating",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44252-5"
+          }],
+          "text": "7. Trouble concentrating on things such as reading the newspaper or watching television?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "LL358-3"
+        },
+        {
+          "linkId": "MovingSpeaking",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "44253-3"
+          }],
+          "text": "8. Moving or speaking so slowly that other people have noticed. Or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "LL358-3"
+        }
+      ]
+    }
+  ]
+}
