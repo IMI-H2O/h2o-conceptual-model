@@ -1,0 +1,31 @@
+{
+      "resourceType": "ValueSet",
+      "id": "severity",
+      "url" : "http://sample-domain.org/fhir/ValueSet/severity",
+      "name": "Severity",
+      "status": "active",
+      "description": "",
+      "compose": {
+        "include": [{
+          "system": "https://sample-domain.org/system",
+          "concept": [
+            {
+              "code": "0",
+              "display": "None"
+            },
+            {
+              "code": "1",
+              "display": "Mild"
+            },
+            {
+              "code": "2",
+              "display": "Moderate"
+            },
+            {
+              "code": "3",
+              "display": "Severe"
+            }
+          ]
+        }]
+      }
+}
