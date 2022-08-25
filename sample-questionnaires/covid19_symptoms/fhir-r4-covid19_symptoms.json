@@ -15,68 +15,6 @@
     "code": "sample_code",
     "display": "COVID19 Symptoms"
   }],
-  "contained": [
-    {
-      "resourceType": "ValueSet",
-      "id": "severity",
-      "name": "Severity",
-      "status": "active",
-      "description": "",
-      "compose": {
-        "include": [{
-          "system": "https://sample-domain.org/system",
-          "concept": [
-            {
-              "code": "0",
-              "display": "None"
-            },
-            {
-              "code": "1",
-              "display": "Mild"
-            },
-            {
-              "code": "2",
-              "display": "Moderate"
-            },
-            {
-              "code": "3",
-              "display": "Severe"
-            }
-          ]
-        }]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "mucus",
-      "name": "Mucus Color",
-      "status": "active",
-      "description": "",
-      "compose": {
-        "include": [{
-          "system": "https://sample-domain.org/system/code/covid19_symptoms",
-          "concept": [
-            {
-              "code": "1",
-              "display": "Mucus is clear"
-            },
-            {
-              "code": "2",
-              "display": "Mucus is white"
-            },
-            {
-              "code": "3",
-              "display": "Mucus is yellow"
-            },
-            {
-              "code": "4",
-              "display": "Mucus has signs of blood"
-            }
-          ]
-        }]
-      }
-    }
-  ],
   "item": [
     {
       "linkId": "changed",
@@ -315,7 +253,7 @@
           "text": "Loss of Sense of Smell (Anosmia)?",
           "type": "choice",
           "required": true,
-          "answerValueSet": "#severity"
+          "answerValueSet": "http://sample-domain.org/fhir/ValueSet/severity"
         },
         {
           "linkId": "sym_nasal_cong",
@@ -434,7 +372,7 @@
           "text": "Headache?",
           "type": "choice",
           "required": true,
-          "answerValueSet": "#severity"
+          "answerValueSet": "http://sample-domain.org/fhir/ValueSet/severity"
         },
         {
           "linkId": "sym_chills",
