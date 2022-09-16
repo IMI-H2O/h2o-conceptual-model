@@ -105,7 +105,7 @@ note right of QuestionnaireItem::unit
   predefined FHIR extension http://hl7.org/fhir/StructureDefinition/questionnaire-unit
 end note
 
-note top of AnswerOption::optionPrefix
+note bottom of AnswerOption
   predefined FHIR extension http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix
 end note
 
