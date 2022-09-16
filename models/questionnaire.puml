@@ -65,6 +65,7 @@ class Encounter {
 class AnswerOption {
   valueX : Type [1..1] « integer | date | ... »
   initialSelected : boolean [0..1]
+  optionPrefix : Extension questionnaire-optionPrefix [0..1]  
 }
  
 class Initial {
@@ -102,6 +103,10 @@ end note
 
 note right of QuestionnaireItem::unit
   predefined FHIR extension http://hl7.org/fhir/StructureDefinition/questionnaire-unit
+end note
+
+note right of AnswerOption::optionPrefix
+  predefined FHIR extension http://hl7.org/fhir/StructureDefinition/questionnaire-optionPrefix
 end note
 
 ' ========================================
