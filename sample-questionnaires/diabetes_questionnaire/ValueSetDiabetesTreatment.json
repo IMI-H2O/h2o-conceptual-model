@@ -1,0 +1,30 @@
+{
+      "resourceType": "ValueSet",
+      "id": "diabetesTreatment",
+      "url" : "http://sample-domain.org/fhir/ValueSet/diabetesTreatment",
+      "name": "DiabetesTreatment",
+      "status": "active",
+      "description": "",
+      "compose": {
+        "include": [{
+          "concept": [
+            {
+              "code": "1",
+              "display": "Diet"
+            },
+            {
+              "code": "2",
+              "display": "Oral agents"
+            },
+            {
+              "code": "3",
+              "display": "Insulin"
+            },
+            {
+              "code": "4",
+              "display": "Other injectables"
+            }
+          ]
+        }]
+      }
+}

@@ -1,0 +1,23 @@
+{
+      "resourceType": "ValueSet",
+      "id": "diabetesType",
+      "url" : "http://sample-domain.org/fhir/ValueSet/diabetesType",
+      "name": "DiabetesType",
+      "status": "active",
+      "description": "",
+      "compose": {
+        "include": [{
+          "system": "https://www.who.int/standards/classifications/classification-of-diseases",
+          "concept": [
+            {
+              "code": "E10",
+              "display": "Type 1 diabetes mellitus"
+            },
+            {
+              "code": "E11",
+              "display": "Type 2 diabetes mellitus"
+            }
+          ]
+        }]
+      }
+}
