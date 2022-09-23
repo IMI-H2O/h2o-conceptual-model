@@ -1,0 +1,107 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "H2O-diabetes",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">H2O Diabetes Questionnaire</div>"
+  },
+  "identifier": [{
+    "use": "official",
+    "value": "H2O-diabetes"
+  }],
+  "version": "1.0.0",
+  "title": "H2O Diabetes Questionnaire",
+  "status": "active",
+  "experimental": true,
+  "subjectType": ["Patient"],
+  "code": [{
+    "system": "http://loinc.org",
+    "code": "69723-5",
+    "display": "Patient Health Questionnaire (PHQ) [Reported]"
+  }],
+  "item": [
+    {
+      "linkId": "patient-related",
+      "text": "Please provide the following demographics data",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "patient-related_gender",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "76691-5",
+            "display": "Gender identity"
+          }],
+          "text": "What is your gender?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "http://hl7.org/fhir/ValueSet/gender-identity"
+        },
+        {
+          "linkId": "patient-related_dob",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "21112-8",
+            "display": "Birth date"
+          }],
+          "text": "What is your date of birth?",
+          "type": "date",
+          "required": true
+        }]
+    },
+    {
+      "linkId": "diagnostic",
+      "text": "Please provide the following information on your diabetes diagnosis",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "diagnostic_typeOfDiabetes",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "29308-4",
+            "display": "Diagnosis"
+          }],
+          "text": "What type of diabetes are you suffering from?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "http://sample-domain.org/fhir/ValueSet/diabetesType"
+        },
+        {
+          "linkId": "diagnostic_yearOfDiagnosis",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "63909-6",
+            "display": "Year of diagnosis of clinician-diagnosed illness [PhenX]"
+          }],
+          "text": "In what year did you receive your diabetes diagnosis?",
+          "type": "date",
+          "required": true
+        }]
+    },
+    {
+      "linkId": "treatment-related",
+      "text": "Please provide the following information on your diabetes treatment",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "treatment_typeOfTreatment",
+          "code": [{
+            "system": "http://loinc.org",
+            "code": "LP267354-1",
+            "display": "Treatment"
+          }],
+          "text": "What diabetes treatment do you receive?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "http://sample-domain.org/fhir/ValueSet/diabetesTreatment"
+        },
+        {
+          "linkId": "treatment_insulinPump",
+          "text": "Do you use an insulin pump?",
+          "type": "choice",
+          "required": true,
+          "answerValueSet": "http://hl7.org/fhir/us/vrdr/ValueSet/vrdr-yes-no-unknown-vs"
+        }]
+    }
+  ]
+}
