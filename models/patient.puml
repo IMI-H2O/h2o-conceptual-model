@@ -67,4 +67,16 @@ Patient *-r- "[0..*]" Link : link
 ' ========================================
 ' end: definition of associations
 ' ========================================
+
+' ========================================
+' start: definition of notes
+' ========================================
+
+note right of Patient::gender (sex)
+  This is, literally, the biological patient's sex, and not how (s)he considers to be her/his gender.
+end note
+
+' ========================================
+' end: definition of notes
+' ========================================
 @enduml
