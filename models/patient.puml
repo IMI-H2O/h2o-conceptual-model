@@ -72,7 +72,7 @@ Patient *-r- "[0..*]" Link : link
 ' start: definition of notes
 ' ========================================
 
-note right of Patient::gender (sex)
+note right of Patient::gender
   This is, literally, the biological patient's sex, and not how (s)he considers to be her/his gender.
 end note
 
