@@ -1,4 +1,4 @@
-# H2O FHIR-Based Conceptual Model
+# H2O FHIR-compliant Conceptual Model
 
 The conceptual model of the H2O project will be published here. For the moment, this page presents the overview model -- a subset of the conceptual model -- of the H2O project. The model is stored in a PlantUML file. Non-final partial models of the overview model can be found in the [models](https://github.com/IMI-H2O/h2o-conceptual-model/blob/main/models/README.md) directory.
 
