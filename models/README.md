@@ -21,7 +21,7 @@ This page presents the non-final partial models of the [overview model](https://
 ![Encounter Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/encounter.puml)
 ### Relevant profiles
 - [Germany Core Encounter Profile](https://ig.fhir.de/basisprofile-de/stable/ExtensionsfrEncounter.html)
-- [US Core Observation Profiles](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-encounter.html)
+- [US Core Encounter Profiles](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-encounter.html)
 
 
 ## Observation Model
