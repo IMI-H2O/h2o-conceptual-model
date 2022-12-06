@@ -24,6 +24,9 @@ This page presents the non-final partial models of the [overview model](https://
 ## Observation Model
 ### See https://www.hl7.org/fhir/observation.html for FHIR specification
 ![Observation Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/observation.puml)
+### Relevant profiles
+- [Germany Core Observation Profiles](https://ig.fhir.de/basisprofile-de/stable/Ressourcen-BeobachtungenMessungenObservation.html and https://simplifier.net/basisprofil-de-r4/~resources?text=observation&category=Profile&sortBy=RankScore_desc)
+- [US Core Observation Profiles](http://hl7.org/fhir/us/core/STU5.0.1/profiles-and-extensions.html#observation)
 
 
 ## ObservationDefinition Model
