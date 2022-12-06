@@ -51,6 +51,9 @@ This page presents the non-final partial models of the [overview model](https://
 ## Questionnaire Model
 ### See https://www.hl7.org/fhir/questionnaire.html for FHIR specification
 ![Questionnaire Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/questionnaire.puml)
+### Relevant profiles
+- [Structured Data Capture Questionnaire Profiles](http://build.fhir.org/ig/HL7/sdc/artifacts.html#5)
+- [US Core QuestionnaireResponse Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-questionnaireresponse.html)
 
 
 ## RelatedPerson Model
