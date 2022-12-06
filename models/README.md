@@ -33,11 +33,11 @@ This page presents the non-final partial models of the [overview model](https://
 
 ## Patient Model
 ### See https://www.hl7.org/fhir/patient.html for FHIR specification
-### Relevent profiles
+![Patient Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/patient.puml)
+### Relevant profiles
 - [Germany Core Patient Profile](https://ig.fhir.de/basisprofile-de/stable/Ressourcen-Patient.html)
 - [Austria Core Patient Profile](https://fhir.hl7.at/r4-core-main/StructureDefinition-at-core-patient.html)
 - [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html)
-![Patient Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/patient.puml)
 
 
 ## Practitioner Model
