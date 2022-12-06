@@ -64,6 +64,9 @@ This page presents the non-final partial models of the [overview model](https://
 ## ValueSet Model
 ### See https://www.hl7.org/fhir/valueset.html for FHIR specification
 ![ValueSet Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/value_set.puml)
+### Relevant profiles
+- [FHIR Core Shareable ValueSet Profile](https://www.hl7.org/fhir/shareablevalueset.html)
+
 
 
 <!--
