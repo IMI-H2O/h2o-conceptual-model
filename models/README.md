@@ -19,6 +19,9 @@ This page presents the non-final partial models of the [overview model](https://
 ## Encounter Model
 ### See https://www.hl7.org/fhir/encounter.html for FHIR specification
 ![Encounter Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/encounter.puml)
+### Relevant profiles
+- [Germany Core Encounter Profile](https://ig.fhir.de/basisprofile-de/stable/ExtensionsfrEncounter.html)
+- [US Core Observation Profiles](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-encounter.html)
 
 
 ## Observation Model
@@ -46,6 +49,8 @@ This page presents the non-final partial models of the [overview model](https://
 ## Practitioner Model
 ### See https://www.hl7.org/fhir/practitioner.html for FHIR specification
 ![Practitioner Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/practitioner.puml)
+### Relevant profiles
+- [US Core Practitioner Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-practitioner.html)
 
 
 ## Questionnaire Model
@@ -59,6 +64,9 @@ This page presents the non-final partial models of the [overview model](https://
 ## RelatedPerson Model
 ### See https://www.hl7.org/fhir/relatedperson.html for FHIR specification
 ![RelatedPerson Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/related_person.puml)
+### Relevant profiles
+- [US Core RelatedPerson Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-relatedperson.html)
+
 
 
 ## ValueSet Model
