@@ -10,7 +10,7 @@ The conceptual model of the H2O project will be published here. For the moment, 
 ## Relevant FHIR Implementation Guides
 
 The following (non-exhaustive) list of existing FHIR implementation guides covers artefacts that are relevant in the context of the H2O conceptual model:
-- [Germany Core Implementation Guide](https://ig.fhir.de/basisprofile-de/stable/Home.html);
-- [Austria Core Implementation Guide](https://fhir.hl7.at/r4-core-main/index.html);
-- [US Core Implementation Guide](https://fhir.hl7.at/r4-core-main/index.html);
-- [Structured Data Capture](http://build.fhir.org/ig/HL7/sdc/index.html);
+- [Germany Core Implementation Guide](https://ig.fhir.de/basisprofile-de/stable/Home.html)
+- [Austria Core Implementation Guide](https://fhir.hl7.at/r4-core-main/index.html)
+- [US Core Implementation Guide](https://fhir.hl7.at/r4-core-main/index.html)
+- [Structured Data Capture](http://build.fhir.org/ig/HL7/sdc/index.html)
