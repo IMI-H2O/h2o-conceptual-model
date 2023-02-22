@@ -42,9 +42,16 @@ This page presents the non-final partial models of the [overview model](https://
 ![Patient Model](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/IMI-H2O/h2o-conceptual-model/main/models/patient.puml)
 ### Relevant profiles
 - [ISiK Basismodul Level 1 (Germany)](https://simplifier.net/guide/implementierungsleitfadenisik-basismodul-stufe1/ImplementationGuide-markdown-Datenobjekte-Patient?version=current)
+- [ISiK Basismodul Level 2 (Germany)](https://simplifier.net/guide/implementierungsleitfadenisik-basismodul/ImplementationGuide-markdown-Datenobjekte-Datenobjekte-Patient?version=current)
 - [Germany Core Patient Profile](https://ig.fhir.de/basisprofile-de/stable/Ressourcen-Patient.html)
 - [Austria Core Patient Profile](https://fhir.hl7.at/r4-core-main/StructureDefinition-at-core-patient.html)
 - [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html)
+### Identified differences between profiles
+The ISiK Basismodul 1 and 2 define patient profiles with different canonical URLs ("https://gematik.de/fhir/ISiK/StructureDefinition/ISiKPatient" versus "https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKPatient"). However, at the moment both patient profiles seem to be identical. They are also consistent with the extensions defined for the Patient resource in the Germany Core Patient Profile.
+#### Differences between ISiK and Austria Core Patient Profiles
+The slices for element "identifier" that are used for the representation of local patient identifiers within a health institution are modeled differently. 
+- In the Austrian profile the slice is named "localPatientId" and binds the identifier's element "type" as follows: "system" fixed to value "http://terminology.hl7.org/CodeSystem/v2-0203", "code" fixed to value "PI", "display" fixed to value "Patient internal identifier".
+- In the ISiK profile the slice is named "Patientennummer" and is bound to a separate profile "Identifier-Profil für die Abbildung einer Patienten-ID". It binds the identifier's element "type" to valueSet "http://fhir.de/ValueSet/identifier-type-de-basis". Further a pattern is specified for element "type" as follows: "system" matched to value "http://terminology.hl7.org/CodeSystem/v2-0203", "code" matched to value "MR"
 
 
 ## Practitioner Model
