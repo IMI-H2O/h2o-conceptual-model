@@ -45,6 +45,7 @@ This page presents the non-final partial models of the [overview model](https://
 - [ISiK Basismodul Level 2 (Germany)](https://simplifier.net/guide/implementierungsleitfadenisik-basismodul/ImplementationGuide-markdown-Datenobjekte-Datenobjekte-Patient?version=current)
 - [Germany Core Patient Profile](https://ig.fhir.de/basisprofile-de/stable/Ressourcen-Patient.html)
 - [Austria Core Patient Profile](https://fhir.hl7.at/r4-core-main/StructureDefinition-at-core-patient.html)
+- [NL Core Patient Profile](https://simplifier.net/Nictiz-R4-zib2020/NlcorePatient/~overview)
 - [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html)
 ### Identified differences between profiles
 The ISiK Basismodul 1 and 2 define patient profiles with different canonical URLs ("https://gematik.de/fhir/ISiK/StructureDefinition/ISiKPatient" versus "https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKPatient"). However, at the moment both patient profiles seem to be identical. They are also consistent with the extensions defined for the Patient resource in the Germany Core Patient Profile.
