@@ -15,5 +15,6 @@ The following (non-exhaustive) list of existing FHIR implementation guides cover
 - [ISiK Basismodul Level 2 (Germany)](https://simplifier.net/guide/implementierungsleitfadenisik-basismodul/ImplementationGuide-markdown-Einfuehrung?version=current)
 - [Germany Core Implementation Guide](https://ig.fhir.de/basisprofile-de/stable/Home.html)
 - [Austria Core Implementation Guide](https://fhir.hl7.at/r4-core-main/index.html)
+- [Nictiz R4 Zib2020](https://simplifier.net/Nictiz-R4-zib2020/~introduction)
 - [US Core Implementation Guide](http://hl7.org/fhir/us/core/STU5.0.1/)
 - [Structured Data Capture](http://build.fhir.org/ig/HL7/sdc/index.html)
