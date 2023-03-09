@@ -57,8 +57,10 @@ The ISiK Basismodul 1 and 2 define patient profiles with different canonical URL
 - In contrast to the Austrian profile, the ISiK and NL profiles define specific slices for the "name" element (slices "Name" and "Geburtsname" in ISiK and slices "nameInformation" and "nameInformation-GivenName" in NL). This probably means that for accessing the names of ISiK and NL patients these slices have to be considered.
 - In contrast to the Austrian profile, the ISiK and NL profiles include additional extensions for separate storage of name components, such as prefixes.
 - All profiles expect the standard name elements (family, given, etc.) to be filled and also include the information held in the extensions, so the standard elements could serve as a common denominator for all profiles
- #### Differences between definition of telecom
+#### Differences between definition of telecom
 - In contrast to the Austrian and ISiK profiles, the NL profile defines specific slices for the "telecom" element (slices "telephoneNumbers" and "emailAdresses")
+#### Differences between definition of gender
+- Continue analysis here (seems to include relevant differences in representation of gender "other" and "divers". Further NL profile uses a concept map to translate NL gender codes to ValueSet "AdministrativeGender")
 
 ## Practitioner Model
 ### See https://www.hl7.org/fhir/practitioner.html for FHIR specification
