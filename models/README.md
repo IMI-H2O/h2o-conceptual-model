@@ -49,11 +49,16 @@ This page presents the non-final partial models of the [overview model](https://
 - [US Core Patient Profile](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html)
 ### Identified differences between profiles
 The ISiK Basismodul 1 and 2 define patient profiles with different canonical URLs ("https://gematik.de/fhir/ISiK/StructureDefinition/ISiKPatient" versus "https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKPatient"). However, at the moment both patient profiles seem to be identical. They are also consistent with the extensions defined for the Patient resource in the Germany Core Patient Profile.
-#### Differences between ISiK and Austria Core Patient Profiles
-The slices for element "identifier" that are used for the representation of local patient identifiers within a health institution are modeled differently. 
-- In the Austrian profile the slice is named "localPatientId" and binds the identifier's element "type" as follows: "system" fixed to value "http://terminology.hl7.org/CodeSystem/v2-0203", "code" fixed to value "PI", "display" fixed to value "Patient internal identifier".
-- In the ISiK profile the slice is named "Patientennummer" and is bound to a separate profile "Identifier-Profil für die Abbildung einer Patienten-ID". It binds the identifier's element "type" to valueSet "http://fhir.de/ValueSet/identifier-type-de-basis". Further a pattern is specified for element "type" as follows: "system" matched to value "http://terminology.hl7.org/CodeSystem/v2-0203", "code" matched to value "MR"
-
+#### Differences between definition of identifiers
+- The slices used for the representation of local patient identifiers within a health institution are modeled differently (in Austrian profile slice is named "localPatientId", in ISiK profile slice is named "Patientennummer", in NL profile no specific slice for the local patient id is defined)
+- The slices used for the representation of social security identifiers are modeled differently (in Austrian profile slice is named "socialSecurityNumber", in ISiK profile slice is named "VersichertenId-GKV", in NL profile slice is named "bsn")
+- All profiles allow the use of further identifiers, such as for example an H2O-specific identifier
+#### Differences between definition of names
+- In contrast to the Austrian profile, the ISiK and NL profiles define specific slices for the "name" element (slices "Name" and "Geburtsname" in ISiK and slices "nameInformation" and "nameInformation-GivenName" in NL). This probably means that for accessing the names of ISiK and NL patients these slices have to be considered.
+- In contrast to the Austrian profile, the ISiK and NL profiles include additional extensions for separate storage of name components, such as prefixes.
+- All profiles expect the standard name elements (family, given, etc.) to be filled and also include the information held in the extensions, so the standard elements could serve as a common denominator for all profiles
+ #### Differences between definition of telecom
+- In contrast to the Austrian and ISiK profiles, the NL profile defines specific slices for the "telecom" element (slices "telephoneNumbers" and "emailAdresses")
 
 ## Practitioner Model
 ### See https://www.hl7.org/fhir/practitioner.html for FHIR specification
