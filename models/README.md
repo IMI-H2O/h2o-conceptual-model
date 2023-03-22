@@ -54,7 +54,7 @@ The ISiK Basismodul 1 and 2 define patient profiles with different canonical URL
 - The slices used for the representation of social security identifiers are modeled differently (in Austrian profile slice is named "socialSecurityNumber", in ISiK profile slice is named "VersichertenId-GKV", in NL profile slice is named "bsn")
 - All profiles allow the use of further identifiers, such as for example an H2O-specific identifier
 #### Differences between definition of names
-- In contrast to the Austrian profile, the ISiK and NL profiles define specific slices for the "name" element (slices "Name" and "Geburtsname" in ISiK and slices "nameInformation" and "nameInformation-GivenName" in NL). This probably means that for accessing the names of ISiK and NL patients these slices have to be considered.
+- In contrast to the Austrian profile, the ISiK and NL profiles define specific slices for the "name" element (slices "Name" and "Geburtsname" in ISiK and slices "nameInformation" and "nameInformation-GivenName" in NL). The slices are represented as profiles on FHIR data type "HumanName" and are distinguished by fixed values for attribute "use" in HumanName. The fixed values are all consistent with the FHIR standard value set for "use", i.e. "usual | official | temp | nickname | anonymous | old | maiden".
 - In contrast to the Austrian profile, the ISiK and NL profiles include additional extensions for separate storage of name components, such as prefixes.
 - All profiles expect the standard name elements (family, given, etc.) to be filled and also include the information held in the extensions, so the standard elements could serve as a common denominator for all profiles
 #### Differences between definition of telecom
