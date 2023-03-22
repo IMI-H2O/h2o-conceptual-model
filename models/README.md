@@ -54,13 +54,15 @@ The ISiK Basismodul 1 and 2 define patient profiles with different canonical URL
 - The slices used for the representation of social security identifiers are modeled differently (in Austrian profile slice is named "socialSecurityNumber", in ISiK profile slice is named "VersichertenId-GKV", in NL profile slice is named "bsn")
 - All profiles allow the use of further identifiers, such as for example an H2O-specific identifier
 #### Differences between definition of names
-- In contrast to the Austrian profile, the ISiK and NL profiles define specific slices for the "name" element (slices "Name" and "Geburtsname" in ISiK and slices "nameInformation" and "nameInformation-GivenName" in NL). The slices are represented as profiles on FHIR data type "HumanName" and are distinguished by fixed values for attribute "use" in HumanName. The fixed values are all consistent with the FHIR standard value set for "use", i.e. "usual | official | temp | nickname | anonymous | old | maiden".
+- In contrast to the Austrian profile, the ISiK and NL profiles define specific slices for the "name" element (slices "Name" and "Geburtsname" in ISiK and slices "nameInformation" and "nameInformation-GivenName" in NL). The slices are represented as profiles on FHIR data type "HumanName" and are distinguished by fixed values for attribute "use" in HumanName. The fixed values are all consistent with the FHIR standard value set "NameUse", i.e. "usual | official | temp | nickname | anonymous | old | maiden".
 - In contrast to the Austrian profile, the ISiK and NL profiles include additional extensions for separate storage of name components, such as prefixes.
 - All profiles expect the standard name elements (family, given, etc.) to be filled and also include the information held in the extensions, so the standard elements could serve as a common denominator for all profiles
 #### Differences between definition of telecom
 - In contrast to the Austrian and ISiK profiles, the NL profile defines specific slices for the "telecom" element (slices "telephoneNumbers" and "emailAdresses")
 #### Differences between definition of gender
-- Continue analysis here (seems to include relevant differences in representation of gender "other" and "divers". Further NL profile uses a concept map to translate NL gender codes to ValueSet "AdministrativeGender")
+- The ISiK profile allows to subgroup gender "other" into the more specific variants "divers" and "unbestimmt" by means of an extension. The NL profile allows to additionally hold the national gender code via an extension and uses a concept map to translate NL gender codes to the FHIR standard value set "AdministrativeGender". The latter allows gender codes "male | female | other | unknown".
+- The Austrian profile does not modify attribute "gender".
+- In H2O we will need to record gender values "Male | Female | Other | Prefer not to say" according to the Diabetes Data Dictionary. If "Prefer not to say" can be represented via code "unknown" from FHIR standard value set "AdministrativeGender", the latter would be sufficient for H2O.
 
 ## Practitioner Model
 ### See https://www.hl7.org/fhir/practitioner.html for FHIR specification
