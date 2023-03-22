@@ -66,6 +66,10 @@ The ISiK Basismodul 1 and 2 define patient profiles with different canonical URL
 #### Differences between definition of birth date
 - The ISiK profile sets attribute "birthDate" to mandatory, whereas the NL and Austrian profiles leave it unmodified, i.e. optional. 
 - The ISiK profile adds an extension that allows a coded recording of the reason of an absent value for birthdate. 
+### Thoughts on an H2O profile
+- As birth date seems to be essential in H2O according to the disease-specific data dictionaries, it should be set to mandatory in H2O
+- Continue here with thoughts on identifier (a mandatory H2O-specific identifier seems to make sense. Might be identified by means of a specific code in attribute "type" and each country could use a different code system, e.g. in Austria the bPK-GK, in Germany the social security number, etc.)
+- If "employment" is relevant for H2O, look for an existing FHIR extension
 
 ## Practitioner Model
 ### See https://www.hl7.org/fhir/practitioner.html for FHIR specification
