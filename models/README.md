@@ -63,6 +63,9 @@ The ISiK Basismodul 1 and 2 define patient profiles with different canonical URL
 - The ISiK profile allows to subgroup gender "other" into the more specific variants "divers" and "unbestimmt" by means of an extension. The NL profile allows to additionally hold the national gender code via an extension and uses a concept map to translate NL gender codes to the FHIR standard value set "AdministrativeGender". The latter allows gender codes "male | female | other | unknown".
 - The Austrian profile does not modify attribute "gender".
 - In H2O we will need to record gender values "Male | Female | Other | Prefer not to say" according to the Diabetes Data Dictionary. If "Prefer not to say" can be represented via code "unknown" from FHIR standard value set "AdministrativeGender", the latter would be sufficient for H2O.
+#### Differences between definition of birth date
+- The ISiK profile sets attribute "birthDate" to mandatory, whereas the NL and Austrian profiles leave it unmodified, i.e. optional. 
+- The ISiK profile adds an extension that allows a coded recording of the reason of an absent value for birthdate. 
 
 ## Practitioner Model
 ### See https://www.hl7.org/fhir/practitioner.html for FHIR specification
