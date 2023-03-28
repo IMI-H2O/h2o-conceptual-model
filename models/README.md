@@ -46,6 +46,7 @@ This page presents the non-final partial models of the [overview model](https://
 - [Germany Core Patient Profile](https://ig.fhir.de/basisprofile-de/stable/Ressourcen-Patient.html)
 - [Austria Core Patient Profile](https://fhir.hl7.at/r4-core-main/StructureDefinition-at-core-patient.html)
 - [NL Core Patient Profile](https://simplifier.net/Nictiz-R4-zib2020/NlcorePatient/~overview)
+- [IPS Patient Profile](http://hl7.org/fhir/uv/ips/StructureDefinition-Patient-uv-ips.html)
 - [(US Core Patient Profile)](http://hl7.org/fhir/us/core/STU5.0.1/StructureDefinition-us-core-patient.html)
 ### Identified differences between profiles
 The ISiK Basismodul 1 and 2 define patient profiles with different canonical URLs ("https://gematik.de/fhir/ISiK/StructureDefinition/ISiKPatient" versus "https://gematik.de/fhir/isik/v2/Basismodul/StructureDefinition/ISiKPatient"). However, at the moment both patient profiles seem to be identical. They are also consistent with the extensions defined for the Patient resource in the Germany Core Patient Profile.
@@ -56,7 +57,8 @@ The ISiK Basismodul 1 and 2 define patient profiles with different canonical URL
 #### Differences between definition of names
 - In contrast to the Austrian profile, the ISiK and NL profiles define specific slices for the "name" element (slices "Name" and "Geburtsname" in ISiK and slices "nameInformation" and "nameInformation-GivenName" in NL). The slices are represented as profiles on FHIR data type "HumanName" and are distinguished by fixed values for attribute "use" in HumanName. The fixed values are all consistent with the FHIR standard value set "NameUse", i.e. "usual | official | temp | nickname | anonymous | old | maiden".
 - In contrast to the Austrian profile, the ISiK and NL profiles include additional extensions for separate storage of name components, such as prefixes.
-- All profiles expect the standard name elements (family, given, etc.) to be filled and also include the information held in the extensions, so the standard elements could serve as a common denominator for all profiles
+- The IPS profile expects at least one of the name elements "family", "given", or "text" to be filled
+- All profiles expect the standard name elements (family, given, etc.) to be filled in addition to the information held in extensions, so the standard elements could serve as a common denominator for all profiles
 #### Differences between definition of telecom
 - In contrast to the Austrian and ISiK profiles, the NL profile defines specific slices for the "telecom" element (slices "telephoneNumbers" and "emailAdresses")
 #### Differences between definition of gender
@@ -64,7 +66,7 @@ The ISiK Basismodul 1 and 2 define patient profiles with different canonical URL
 - The Austrian profile does not modify attribute "gender".
 - In H2O we will need to record gender values "Male | Female | Other | Prefer not to say" according to the Diabetes Data Dictionary. If "Prefer not to say" can be represented via code "unknown" from FHIR standard value set "AdministrativeGender", the latter would be sufficient for H2O.
 #### Differences between definition of birth date
-- The ISiK profile sets attribute "birthDate" to mandatory, whereas the NL and Austrian profiles leave it unmodified, i.e. optional. 
+- The ISiK and the IPS profile set attribute "birthDate" to mandatory, whereas the NL and Austrian profiles leave it unmodified, i.e. optional. 
 - The ISiK profile adds an extension that allows a coded recording of the reason of an absent value for birthdate. 
 ### Thoughts on an H2O profile
 - As birth date seems to be essential in H2O according to the disease-specific data dictionaries, it should be set to mandatory in H2O
