@@ -22,6 +22,7 @@ class Questionnaire {
   status : code [1..1] « draft | active | retired | unknown »
   date : dateTime [0..1]
   description : markdown [0..1]
+  code : Coding [0..*]
 }
 
 class QuestionnaireResponse {
@@ -127,7 +128,7 @@ EnableWhen -- "[1..1]" QuestionnaireItem : question
 QuestionnaireItem -- "[0..1]" ValueSet : answerValueSet
 
 
-QuestionnaireResponse *-- "[0..1]" Questionnaire : questionnaire
+QuestionnaireResponse *-- "[1..1]" Questionnaire : questionnaire
 QuestionnaireResponse *-- "[0..*]" QuestionnaireResponseItem : item
 QuestionnaireResponse -- "[0..1]" Patient : subject
 QuestionnaireResponse -- "[0..1]" Patient : source
