@@ -18,3 +18,4 @@ The following (non-exhaustive) list of existing FHIR implementation guides cover
 - [Nictiz R4 Zib2020](https://simplifier.net/Nictiz-R4-zib2020/~introduction)
 - [US Core Implementation Guide](http://hl7.org/fhir/us/core/STU5.0.1/)
 - [Structured Data Capture](http://build.fhir.org/ig/HL7/sdc/index.html)
+- [FHIR PSOM Wales](https://simplifier.net/fhir-psom-wales)
